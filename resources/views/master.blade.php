@@ -29,4 +29,11 @@
 
 </body>
 
+<style>
+    .carousel-item img {
+        width: 70vw;
+        height: 50vh !important;
+    }
+</style>
+
 </html>
