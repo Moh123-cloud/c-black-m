@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\homeController;
+use App\Http\Controllers\sellController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,4 +20,7 @@ Route::get('/', function () {
 });
 
 //Route for Home page
-Route::get('home', [homeController::class, 'home']);
+Route::get('home', [homeController::class, 'home'])->name('home');
+
+//Route for Sell page which is defined with the name sell
+Route::post('sell', [sellController::class, 'sell'])->name('sell');

@@ -34,6 +34,18 @@
         width: 70vw;
         height: 50vh !important;
     }
+
+    .sellForm {
+        margin-top: 20px;
+        margin-left: 40px;
+        margin-right: 40px;
+        padding: 10px;
+    }
+
+    .search {
+        width: 1000px;
+
+    }
 </style>
 
 </html>
