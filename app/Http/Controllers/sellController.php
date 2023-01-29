@@ -17,28 +17,20 @@ class sellController extends Controller
         $product->location = $req->location;
         $product->price = $req->price;
 
-        $req->validate([
-            'images.*' => 'image|mimes:jpeg,png,jpg,gif|max:2048'
-        ]);
-        $images = $req->file('images') ?? [];
+        if ($req->hasFile('image')) {
+            /*  $req->validate([
+            'image.*' => 'image|mimes:jpeg,png,jpg,gif|max:2048'
+            ]); */
+            $images = $req->image;
 
-        if (count($images) > 5) {
-            return redirect()->back()->with('error', 'You can only upload a maximum of 5 photos');
-        } else {
-            foreach ($images as $image) {
-                $imagesname = time() . '.' . $images->getClientOriginalExtension();
-                $req->file->move('images', $imagesname);
-                $product->image = $imagesname;
-            }
+            $imagesname = time() . '.' . $images->getClientOriginalExtension();
+            $req->file->move('Images', $imagesname);
+            $product->image = $imagesname;
+
         }
-        if (count($images) > 0) {
-            $product->save();
-            return redirect('sell');
-        }
-
-
-
-
+        $product->save();
+        return redirect()->back();
 
     }
+
 }

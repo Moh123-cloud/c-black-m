@@ -23,4 +23,4 @@ Route::get('/', function () {
 Route::get('home', [homeController::class, 'home'])->name('home');
 
 //Route for Sell page which is defined with the name sell
-Route::post('sell', [sellController::class, 'sell'])->name('sell');
+Route::get('sell', [sellController::class, 'sell'])->name('sell');
