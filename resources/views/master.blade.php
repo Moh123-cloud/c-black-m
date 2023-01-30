@@ -46,6 +46,23 @@
         width: 1000px;
 
     }
+
+    .product-img {
+        /* width: 100px !important; */
+        height: 200px !important;
+    }
+
+    .trending-wrapper{
+        margin: 30px;
+    }
+
+    .trending-item{
+        float:left !important;
+        width: 20% !important;
+        margin: 3 px;
+        padding: 2px;
+    }
+
 </style>
 
 </html>

@@ -43,4 +43,22 @@
             <span class="sr-only">Next</span>
         </a>
     </div>
-@endsection
+
+    <div class="trending-wrapper">
+        <h1>Products</h1>
+    
+        @foreach ($product as $item)          
+            <div class="trending-item">  
+                <a href="details/{{$item['id']}}">             
+                    <img src="image/{{ $item->images }}" alt="Photo of the product" class="product-img">
+                    <h3>{{ $item->title }}</h3>
+                    <p>{{ $item->description }}</p>
+                    <h4>{{ $item->price }}</h4>
+                </a>
+            </div>  
+        @endforeach
+    </div>   
+
+        
+    
+@endsection 

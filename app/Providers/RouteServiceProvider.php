@@ -10,13 +10,15 @@ use Illuminate\Support\Facades\Route;
 
 class RouteServiceProvider extends ServiceProvider
 {
-    /**
+    /**  
      * The path to the "home" route for your application.
      *
      * Typically, users are redirected here after authentication.
      *
      * @var string
      */
+
+    protected $namespace = 'App\\Http\\Controllers';
     public const HOME = '/home';
 
     /**
