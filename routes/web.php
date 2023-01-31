@@ -24,6 +24,8 @@ Route::get('/', function () {
 //Route for home
 Route::get('/home', [homeController::class, 'index'])->name('/home');
  
+//Route for main page
+Route::get('/', [homeController::class, 'main']);
 
 //Route for product section
 /* Route::get('home/{product}', [App\Http\Controllers\homeController::class, 'item']); */
@@ -37,3 +39,20 @@ Route::post('sellproducts', [sellController::class, 'sell']);
 
 //Route for details
 Route::get('details/{id}', [homeController::class, 'details']);
+
+Route::middleware([
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified'
+])->group(function () {
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
+});
+
+
+//Route for logout
+Route::get('/logout', function () {
+    Session::forget('user');
+    return redirect('/home');
+});

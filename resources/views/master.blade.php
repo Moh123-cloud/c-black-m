@@ -22,7 +22,7 @@
 </head>
 
 <body>
-
+    
     {{ View::make('header') }}
     @yield('content')
     {{ View::make('footer') }}
@@ -61,6 +61,15 @@
         width: 20% !important;
         margin: 3 px;
         padding: 2px;
+    }
+
+    .detail-container{
+        margin: 50px;
+    }
+
+    .detail-img{
+        width: 95% !important;
+        height: 50vh !important;
     }
 
 </style>
