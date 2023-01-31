@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\homeController;
 use App\Http\Controllers\sellController;
+use App\Http\Controllers\itemsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,6 +41,9 @@ Route::post('sellproducts', [sellController::class, 'sell']);
 //Route for details
 Route::get('details/{id}', [homeController::class, 'details']);
 
+//Route for listed products
+Route::get('items', [itemsController::class, 'index'])->name('items');
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
@@ -52,7 +56,4 @@ Route::middleware([
 
 
 //Route for logout
-Route::get('/logout', function () {
-    Session::forget('user');
-    return redirect('/home');
-});
+/* Route::post('/logout', [homeController::class, 'logout'])->name('logout'); */

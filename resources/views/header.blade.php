@@ -37,43 +37,39 @@
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
         </form>
 
+
         
         <ul class="nav navbar-nav mr-auto navbar-right">
+
+            <li class="nav-item">
+                <a href="{{ route('items') }}" class="nav-link">Your Products</a>
+            </li>
 
             <li class="nav-item ">
                 <a class="nav-link" href="{{ route('sell') }}">SELL</a>
             </li>
 
-            <?php
+           
+            @if(Route::has('login'))
+            @auth
+                
+                
             
-            if(Auth::id()){
-            
-            ?>
-                <li class="nav-item">
-                <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Name
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="{{ url['logout'] }}">Log Out</a>
-                    </div>
-                    </div>
-            </li>
-            <?php
-            }
-            else{
-            ?>
+            @else
                 <li class="nav-item">
                     <a class="btn btn-primary ml-lg-3" href="{{ route('login') }}"> Login</a>
                 </li>
-    
+
                 <li class="nav-item">
                     <a class="btn btn-primary ml-lg-3" href="{{ route('register') }}"> Register</a>
                 </li>
-            <?php
-            }
+                
+            @endauth
+            @endif
+            
+        
 
-            ?>
+            
         </ul>
     </div>
 </nav>

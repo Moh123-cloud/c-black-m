@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 
 
 class homeController extends Controller
@@ -64,6 +65,10 @@ class homeController extends Controller
     }
 
 
-    
+  /*   public function logout()
+    {
+        Session::forget('user');
+        return redirect('/home');
+    } */
 }
 
