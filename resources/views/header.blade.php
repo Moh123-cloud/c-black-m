@@ -1,6 +1,6 @@
-{{-- Navigation Bar --}}
 
- 
+
+{{-- Navigation Bar --}}
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#">Black Market</a>
@@ -42,7 +42,7 @@
         <ul class="nav navbar-nav mr-auto navbar-right">
 
             <li class="nav-item">
-                <a href="{{ route('items') }}" class="nav-link">Your Products</a>
+                <a class="nav-link" href="{{ url('item') }}">Your Products</a>
             </li>
 
             <li class="nav-item ">
@@ -56,7 +56,7 @@
                 
             
             @else
-                <li class="nav-item">
+                <li class="na v-item">
                     <a class="btn btn-primary ml-lg-3" href="{{ route('login') }}"> Login</a>
                 </li>
 

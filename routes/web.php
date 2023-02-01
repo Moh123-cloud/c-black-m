@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\homeController;
 use App\Http\Controllers\sellController;
-use App\Http\Controllers\itemsController;
+use App\Http\Controllers\productController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,6 +31,8 @@ Route::get('/', [homeController::class, 'main']);
 //Route for product section
 /* Route::get('home/{product}', [App\Http\Controllers\homeController::class, 'item']); */
 
+//Route for sell view
+Route::get('item', [productController::class, 'index']);
 
 //Route for sell view
 Route::get('sell', [sellController::class, 'sellProduct'])->name('sell');
@@ -42,7 +44,7 @@ Route::post('sellproducts', [sellController::class, 'sell']);
 Route::get('details/{id}', [homeController::class, 'details']);
 
 //Route for listed products
-Route::get('items', [itemsController::class, 'index'])->name('items');
+
 
 Route::middleware([
     'auth:sanctum',
@@ -57,3 +59,5 @@ Route::middleware([
 
 //Route for logout
 /* Route::post('/logout', [homeController::class, 'logout'])->name('logout'); */
+
+
