@@ -51,9 +51,9 @@
             <div class="trending-item">  
                 <a href="details/{{$item['id']}}">             
                     <img src="image/{{ $item->images }}" alt="Photo of the product" class="product-img">
-                    <h3>{{ $item->title }}</h3>
+                    <h4>{{ $item->title }}</h3>
                     <p>{{ $item->description }}</p>
-                    <h4>{{ $item->price }}</h4>
+                    <h5>{{ $item->price }}</h5>
                 </a>
             </div>  
         @endforeach

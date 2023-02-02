@@ -31,8 +31,15 @@ Route::get('/', [homeController::class, 'main']);
 //Route for product section
 /* Route::get('home/{product}', [App\Http\Controllers\homeController::class, 'item']); */
 
-//Route for sell view
-Route::get('item', [productController::class, 'index']);
+
+//Route for product controller
+Route::get('product', [productController::class, 'index']);
+
+//Route for product view
+Route::get('item', [productController::class, 'productList']);
+
+//Route for search product
+Route::post('search', [productController::class, 'search'])->name('search');
 
 //Route for sell view
 Route::get('sell', [sellController::class, 'sellProduct'])->name('sell');
@@ -43,7 +50,7 @@ Route::post('sellproducts', [sellController::class, 'sell']);
 //Route for details
 Route::get('details/{id}', [homeController::class, 'details']);
 
-//Route for listed products
+
 
 
 Route::middleware([

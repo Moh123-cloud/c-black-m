@@ -1,4 +1,9 @@
+<?php
 
+use App\Http\Controllers\productController;
+$total = productController::index();
+
+?>
 
 {{-- Navigation Bar --}}
 
@@ -21,7 +26,7 @@
                     Category
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Phones & Accessories</a>
+                    <a class="dropdown-item" href="#">Mobile Phones & Accessories</a>
                     <a class="dropdown-item" href="#">Electronics</a>
                     <a class="dropdown-item" href="#">Clothes</a>
                     <a class="dropdown-item" href="#">Furniture</a>
@@ -29,11 +34,12 @@
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="#">Something else here</a>
                 </div>
-            </li>
+            </li>  
 
         </ul>
-        <form class="form-inline my-2 my-lg-0 navbar-left">
-            <input class="form-control mr-sm-2 search" type="search" placeholder="Search" aria-label="Search">
+        <form class="form-inline my-2 my-lg-0 navbar-left" action="{{route('search')}}" method="post">
+            @csrf
+            <input class="form-control mr-sm-2 search search-box" type="search" placeholder="Search Title, Category or Description" aria-label="Search" name="search">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
         </form>
 
@@ -42,7 +48,7 @@
         <ul class="nav navbar-nav mr-auto navbar-right">
 
             <li class="nav-item">
-                <a class="nav-link" href="{{ url('item') }}">Your Products</a>
+                <a class="nav-link" href="{{ url('item') }}">Your Products({{$total}})</a>
             </li>
 
             <li class="nav-item ">

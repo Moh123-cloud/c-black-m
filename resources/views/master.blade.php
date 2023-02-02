@@ -50,6 +50,7 @@
     .product-img {
         /* width: 100px !important; */
         height: 200px !important;
+        border-radius: 3px;
     }
 
     .trending-wrapper{
@@ -63,6 +64,10 @@
         padding: 2px;
     }
 
+    .trending-item:hover{
+        transform: scale(1.01) !important;
+    }
+
     .detail-container{
         margin: 50px;
     }
@@ -70,6 +75,18 @@
     .detail-img{
         width: 95% !important;
         height: 50vh !important;
+    }
+
+    .search-box{
+        width: 500px !important;
+    }
+
+    a{
+        text-decoration:none !important;
+    }
+
+    a:hover{
+        color:blue !important;
     }
 
 </style>

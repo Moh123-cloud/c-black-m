@@ -46,9 +46,15 @@
         </div>
 
        <div class="form-group">
-        <label for="">Upload Photo</label>
-        <input type="file" name="file">
+            <label for="">Upload Photo</label>
+            <input type="file" name="file">
        </div>
+
+       <div class="form-group">
+            <input type="hidden" name="user_id">
+       </div>
+
+       
 
 
         <button type="submit" class="btn btn-success">Submit</button>
