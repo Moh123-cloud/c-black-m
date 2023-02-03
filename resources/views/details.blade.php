@@ -16,6 +16,8 @@
                     <h5>Description: {{ $product['description'] }}</h5>
                     <h5>Price: {{ $product['price'] }}</h5>
                     <h5>Location: {{ $product['location'] }}</h5>
+                    <h5>Contact: {{ $product['phone'] }}</h5>
+                    
                 </div>
             </div>
         </div>  

@@ -18,7 +18,7 @@ use App\Http\Controllers\productController;
 
 //Route for home
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });  
 
 
@@ -27,6 +27,9 @@ Route::get('/home', [homeController::class, 'index'])->name('/home');
  
 //Route for main page
 Route::get('/', [homeController::class, 'main']);
+
+//Route for phone page
+Route::get('/phone', [homeController::class, 'phone']);
 
 //Route for product section
 /* Route::get('home/{product}', [App\Http\Controllers\homeController::class, 'item']); */
@@ -68,3 +71,20 @@ Route::middleware([
 /* Route::post('/logout', [homeController::class, 'logout'])->name('logout'); */
 
 
+//Route for phone category blade
+Route::get('phone', [homeController::class, 'phone'])->name('phone');
+
+//Route for electronics category blade
+Route::get('electronic', [homeController::class, 'electronic'])->name('electronic');
+
+//Route for furniture category blade
+Route::get('furniture', [homeController::class, 'furniture'])->name('furniture');
+
+//Route for computer category blade
+Route::get('computer', [homeController::class, 'computer'])->name('computer');
+
+//Route for fashion category blade
+Route::get('fashion', [homeController::class, 'fashion'])->name('fashion');
+
+//Route for sport category blade
+Route::get('sport', [homeController::class, 'sport'])->name('sport');

@@ -45,6 +45,12 @@
                 required>
         </div>
 
+        <div class="form-group">
+            <label for="formGroupExampleInput2">Phone Number</label>
+            <input type=" number" name="phone" class="form-control" id="formGroupExampleInput2" placeholder="eg 0712345678"
+                required>
+        </div>
+
        <div class="form-group">
             <label for="">Upload Photo</label>
             <input type="file" name="file">

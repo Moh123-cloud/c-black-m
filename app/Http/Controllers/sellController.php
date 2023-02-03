@@ -24,6 +24,7 @@ class sellController extends Controller
         $product->location = $req->location;
         $product->user_id = auth()->user()->id;;
         $product->price = $req->price;
+        $product->phone = $req->phone;
 
         
         $image = $req->file;

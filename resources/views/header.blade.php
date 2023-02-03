@@ -26,13 +26,13 @@ $total = productController::index();
                     Category
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Mobile Phones & Accessories</a>
-                    <a class="dropdown-item" href="#">Electronics</a>
-                    <a class="dropdown-item" href="#">Clothes</a>
-                    <a class="dropdown-item" href="#">Furniture</a>
-                    <a class="dropdown-item" href="#">Sports & Gaming</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
+                    <a class="dropdown-item" href="{{ route('phone') }}">Phones & Accessories</a>
+                    <a class="dropdown-item" href="{{ route('electronic') }}">Electronics</a>
+                    <a class="dropdown-item" href="{{ route('furniture') }}">Furniture</a>
+                    <a class="dropdown-item" href="{{ route('computer') }}">Computer Accessories</a>
+                    <a class="dropdown-item" href="{{ route('fashion') }}">Fashion</a>
+                    <a class="dropdown-item" href="{{ route('sport') }}">Sports & Gaming</a>
+                    
                 </div>
             </li>  
 
@@ -56,10 +56,15 @@ $total = productController::index();
             </li>
 
            
-            @if(Route::has('login'))
+            @if(Auth::id())
+
+
+
             @auth
                 
-                
+                <li class="na v-item">
+                    <a class="btn btn-primary ml-lg-3" href="{{ route('logout') }}"> Logout</a>
+                </li> 
             
             @else
                 <li class="na v-item">

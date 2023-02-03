@@ -53,8 +53,13 @@
         border-radius: 3px;
     }
 
+    .category-block{
+        display: block !important;
+    }
+
     .trending-wrapper{
         margin: 30px;
+        margin-bottom: 30px;
     }
 
     .trending-item{
