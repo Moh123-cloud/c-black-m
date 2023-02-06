@@ -42,8 +42,25 @@ class homeController extends Controller
                 return view('admin.home');
             }
         } else {
-            $product = Product::all();
-            return view('home', compact('product'));
+            $phone = Product::where('category', 'Phone & Accessories')
+                ->get();
+
+            $computer = Product::where('category', 'Computer Accessories')
+                ->get();
+
+            $electronic = Product::where('category', 'Electronics')
+                ->get();
+
+            $sport = Product::where('category', 'Sports & Gaming')
+                ->get();
+
+            $furniture = Product::where('category', 'Furniture')
+                ->get();
+
+            $fashion = Product::where('category', 'Fashion')
+                ->get();
+
+            return view('home', compact('product', 'phone', 'computer', 'electronic', 'sport', 'furniture', 'fashion'));
         }
     }
 

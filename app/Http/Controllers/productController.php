@@ -18,17 +18,60 @@ class productController extends Controller
 
     }
 
+
+    //Controller to join the users and product tables
     public function productList(){
         $userId = auth()->user()->id;
         $products = DB::table('products')
-        ->join('users', 'products.user_id', '=', 'products.id')
+        ->join('users', 'products.user_id', '=', 'users.id')
         ->where('products.user_id', $userId)
         ->select('products.*')
         ->get();
 
+
+
         return view('product', ['products'=>$products]);
     }
 
+    //Controller to update products view
+    public function update($id){
+        $product = Product::find($id);
+        return view('update', ['products'=>$product]);
+    }
+
+
+    //Controller to update products 
+    public function updateproducts(Request $req, $id)
+    {
+        $product = Product::findOrFail($id);
+        $product->title = $req->title;
+        $product->category = $req->category;
+        $product->description = $req->description;
+        $product->location = $req->location;
+        $product->user_id = auth()->user()->id;;
+        $product->price = $req->price;
+        $product->phone = $req->phone;
+
+        
+        $image = $req->file;
+        $imagename = time() . '.' . $image->getClientOriginalExtension();
+        $req->file->move('image', $imagename);
+        $product->images = $imagename;
+        $product->save();
+
+        return redirect()->back()->with('success', 'Product Updated Successfully');
+    }
+
+
+    //Controller to delete a product
+    public function destroy($id){
+        $product = Product::find($id);
+        $product->delete();
+        return redirect()->back()->with('success', 'Product Deleted Successfully');
+    }
+
+
+    //Controller to search for product
     public function search(Request $req)
     {
         $data = Product::where('title', 'like','%'. $req->input('search'). '%')

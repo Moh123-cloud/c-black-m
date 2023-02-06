@@ -44,6 +44,15 @@ Route::get('item', [productController::class, 'productList']);
 //Route for search product
 Route::post('search', [productController::class, 'search'])->name('search');
 
+//Route for delete product
+Route::delete('delete/{id}', [productController::class, 'destroy'])->name('delete');
+
+//Route for update product view
+Route::get('update/{id}', [productController::class, 'update'])->name('update');
+
+//Route for update product controller
+Route::post('updateproducts/{id}', [productController::class, 'updateproducts'])->name('updateproducts');
+
 //Route for sell view
 Route::get('sell', [sellController::class, 'sellProduct'])->name('sell');
 

@@ -54,18 +54,22 @@
     }
 
     .category-block{
-        display: block !important;
+        display: flex !important;
+        flex-wrap: wrap !important;
+        margin: 20px;
+
     }
 
     .trending-wrapper{
-        margin: 30px;
+        margin: 10px !important;
         margin-bottom: 30px;
     }
 
     .trending-item{
         float:left !important;
-        width: 20% !important;
-        margin: 3 px;
+        width: 19% !important;
+        display:block !important;
+        margin: 3px;
         padding: 2px;
     }
 
@@ -78,8 +82,8 @@
     }
 
     .detail-img{
-        width: 95% !important;
-        height: 50vh !important;
+        width: 60px !important;
+        height: 50px !important;
     }
 
     .search-box{

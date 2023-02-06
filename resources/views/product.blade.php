@@ -17,7 +17,7 @@
             <th scope="col">Image</th>
             <th scope="col">Title</th>
             <th scope="col">Description</th>
-            <th scope="col">category</th>
+            <th scope="col">Category</th>
             <th scope="col">Location</th>
             <th scope="col">Price</th>
             <th scope="col">Buttons</th>
@@ -27,15 +27,28 @@
         <tbody>
             <tr>
                 <th scope="row">{{$loop->iteration}}</th>
+                <td>
+                    <img src="/image/{{ $item->images }}" alt="Product Image" class="detail-img">
+                </td>
                 <td>{{$item->title}}</td>
                 <td>{{$item->description}}</td>
                 <td>{{$item->category}}</td>
                 <td>{{$item->location}}</td>
                 <td>{{$item->price}}</td>
-                <td>{{$item->images}}</td>
                 <td>
-                    <button type="submit" class="btn btn-primary">Edit</button>
-                    <button type="submit" class="btn btn-primary">Update</button>
+
+                    <form action="{{ route('update', $item->id) }}" method="put">
+                        @csrf
+                        @method('PUT')
+                        <button type="submit" class="btn btn-primary">Edit</button>
+                    </form>
+
+                    <form action="{{ route('delete', $item->id) }}" method="post">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </form>
+
                 </td>
 
             </tr>
