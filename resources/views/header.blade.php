@@ -47,35 +47,32 @@ $total = productController::index();
         
         <ul class="nav navbar-nav mr-auto navbar-right">
 
-            <li class="nav-item">
-                <a class="nav-link" href="{{ url('item') }}">Your Products({{$total}})</a>
-            </li>
+            @if (Route::has('login'))
+                @auth
 
-            <li class="nav-item ">
-                <a class="nav-link" href="{{ route('sell') }}">SELL</a>
-            </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('item') }}">Your Products({{$total}})</a>
+                    </li>
 
-           
-            @if(Auth::id())
+                    <li class="nav-item ">
+                        <a class="nav-link" href="{{ route('sell') }}">SELL</a>
+                    </li>
 
-
-
-            @auth
-                
-                <li class="na v-item">
-                    <a class="btn btn-primary ml-lg-3" href="{{ route('logout') }}"> Logout</a>
-                </li> 
             
-            @else
-                <li class="na v-item">
-                    <a class="btn btn-primary ml-lg-3" href="{{ route('login') }}"> Login</a>
-                </li>
+                    <form action="{{ route('logout') }}" method="POST">
+                        @csrf
+                        <button type="submit">Logout</button>
+                    </form>
+                @else
+                    <li class="nav-item">
+                        <a class="btn btn-primary ml-lg-3" href="{{ Route('login') }}"> Login</a>
+                    </li>
 
-                <li class="nav-item">
-                    <a class="btn btn-primary ml-lg-3" href="{{ route('register') }}"> Register</a>
-                </li>
-                
-            @endauth
+                    <li class="nav-item">
+                        <a class="btn btn-primary ml-lg-3" href="{{ Route('register') }}"> Register</a>
+                    </li>
+
+                @endauth
             @endif
             
         

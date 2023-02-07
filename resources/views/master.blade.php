@@ -47,9 +47,15 @@
 
     }
 
+    .container{
+        align-items: center;
+        justify-content: center;
+    }
+
     .product-img {
         /* width: 100px !important; */
         height: 200px !important;
+        object-fit: cover;
         border-radius: 3px;
     }
 
@@ -59,18 +65,18 @@
         margin: 20px;
 
     }
-
+ 
     .trending-wrapper{
-        margin: 10px !important;
-        margin-bottom: 30px;
+        /* margin: 10px !important;
+        margin-bottom: 30px; */
     }
 
     .trending-item{
         float:left !important;
-        width: 19% !important;
+       /*  width: 20% !important; */
+        max-width: 100%;
         display:block !important;
-        margin: 3px;
-        padding: 2px;
+        
     }
 
     .trending-item:hover{
@@ -81,9 +87,13 @@
         margin: 50px;
     }
 
-    .detail-img{
+    .update-img{
         width: 60px !important;
         height: 50px !important;
+    }
+    .detail-img{
+        width: 400px !important;
+        height: 350px !important;
     }
 
     .search-box{
@@ -96,6 +106,50 @@
 
     a:hover{
         color:blue !important;
+    }
+
+
+    /* For screen larger than 1280(xl) */
+    @media(min-width:1280px){
+        .container{
+            max-width: :1280px;
+        }
+    }
+
+    /* For screen larger than 1024px(lg but less than 1280px) */
+    @media(min-width:1024px){
+        .container{
+            max-width: 1280px;
+        }
+
+        .lg-cols-6 {
+            display:grid;
+            grid-template-columns: repeat(6, minmax(0, 1fr));
+        }
+    }
+
+    /* For screen larger than 768px(lg but less than 768px) */
+    @media(min-width:768px){
+        .container{
+            max-width: 768px;
+        }
+
+        .lg-cols-4 {
+            display:grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+    }
+
+    /* For screen larger than 640px(lg but less than 768px) */
+    @media(min-width: 640px){
+        .container{
+            max-width: 640px;
+        }
+
+        .lg-cols-4 {
+            display:grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
     }
 
 </style>

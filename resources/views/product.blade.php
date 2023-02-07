@@ -2,11 +2,19 @@
 
 
 @section('content')
-@php
-    ini_set('display_errors', 1);
-    ini_set('display_startup_errors', 1);
-    error_reporting(E_ALL);
-@endphp
+
+    <div align="center" style="padding: 30px;">
+        <div>
+            @if(session()->has('message'))
+                <div class="alert alert-success" id="alert">
+                    <button type="button" class="close" data-dismiss="alert">x</button>
+                    {{ session()->get('message') }}
+                </div>
+            @endif
+
+        </div>
+    </div>
+
     <h1>Your Products</h1>
 
     @if($products !== null)
@@ -28,7 +36,7 @@
             <tr>
                 <th scope="row">{{$loop->iteration}}</th>
                 <td>
-                    <img src="/image/{{ $item->images }}" alt="Product Image" class="detail-img">
+                    <img src="/image/{{ $item->images }}" alt="Product Image" class="update-img">
                 </td>
                 <td>{{$item->title}}</td>
                 <td>{{$item->description}}</td>
@@ -61,7 +69,16 @@
     @endif
 
         
+    <script type="text/javascript">
 
+        $("document").ready(function(){
+            setTime(function()
+            {
+                $("div.alert").remove();
+            },3000);
+        });
+
+    </script>
     
 
 @endsection

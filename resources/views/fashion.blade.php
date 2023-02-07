@@ -47,7 +47,6 @@
     
     
         {{-- Fashion Display --}}
-        @if(count($product) > 0 )
             <div class="trending-wrapper">
                 <h2>Fashion</h2>
                 @foreach ($product as $item)          
@@ -61,7 +60,6 @@
                     </div>  
                 @endforeach
             </div><br><br>
-        @endif
     </div>
 
 

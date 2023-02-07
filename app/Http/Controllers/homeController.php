@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Session;
 class homeController extends Controller
 {
     //
-    public function index()
+       public function index()
     {
         if (Auth::id()) {
             if (Auth::user()->usertype == '0') {
@@ -42,26 +42,9 @@ class homeController extends Controller
                 return view('admin.home');
             }
         } else {
-            $phone = Product::where('category', 'Phone & Accessories')
-                ->get();
-
-            $computer = Product::where('category', 'Computer Accessories')
-                ->get();
-
-            $electronic = Product::where('category', 'Electronics')
-                ->get();
-
-            $sport = Product::where('category', 'Sports & Gaming')
-                ->get();
-
-            $furniture = Product::where('category', 'Furniture')
-                ->get();
-
-            $fashion = Product::where('category', 'Fashion')
-                ->get();
-
-            return view('home', compact('product', 'phone', 'computer', 'electronic', 'sport', 'furniture', 'fashion'));
+            return redirect('/login');
         }
+    
     }
 
     //Controller for all products
@@ -94,9 +77,15 @@ class homeController extends Controller
                 return view('admin.home');
             }
         } else {
-            $product = Product::all();
-            return view('home', compact('product'));
+            return redirect('/login');
         }
+    }
+
+    //Controller for detail page
+    public function details($id)
+    {
+        $data = Product::find($id);
+        return view('details', ['product' => $data]);
     }
 
     //Controller for phone
@@ -106,7 +95,7 @@ class homeController extends Controller
         return view('phone', ['product' => $phone]);
     }
    
-    //Controller for phone
+    //Controller for electronic
     public function electronic(){
         $electronic = Product::where('category', 'Electronics')
                 ->get();

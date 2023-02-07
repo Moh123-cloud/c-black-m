@@ -13,8 +13,13 @@ class productController extends Controller
     //
     static function index()
     {
-        $userId = auth()->user()->id;
-        return Product::where('user_id', $userId)->count();
+       if (auth()->check()){
+            $userId = auth()->user()->id;
+            return Product::where('user_id', $userId)->count();
+        } else {
+            return redirect()->back();
+        }
+
 
     }
 
@@ -43,23 +48,40 @@ class productController extends Controller
     //Controller to update products 
     public function updateproducts(Request $req, $id)
     {
-        $product = Product::findOrFail($id);
-        $product->title = $req->title;
-        $product->category = $req->category;
-        $product->description = $req->description;
-        $product->location = $req->location;
-        $product->user_id = auth()->user()->id;;
-        $product->price = $req->price;
-        $product->phone = $req->phone;
+        if (auth()->check()){
+            $userId = auth()->user()->id;
+            if (\Illuminate\Support\Facades\Auth::user()->usertype == '0') {
+                $product = Product::findOrFail($id);
+                $product->title = $req->title;
+                $product->category = $req->category;
+                $product->description = $req->description;
+                $product->location = $req->location;
+                $product->user_id = auth()->user()->id;
+                $product->price = $req->price;
+                $product->phone = $req->phone;
 
-        
-        $image = $req->file;
-        $imagename = time() . '.' . $image->getClientOriginalExtension();
-        $req->file->move('image', $imagename);
-        $product->images = $imagename;
-        $product->save();
 
-        return redirect()->back()->with('success', 'Product Updated Successfully');
+                $image = $req->file;
+                $imagename = time() . '.' . $image->getClientOriginalExtension();
+                $req->file->move('image', $imagename);
+                $product->images = $imagename;
+                $product->save();
+
+                return redirect()->back()->with('success', 'Product Updated Successfully');
+            }
+            //if it is an admin
+            else
+                {
+                return view('admin.home');
+                }
+           
+        }
+        else{
+                return redirect('/login');
+        }
+
+            
+       
     }
 
 
@@ -67,7 +89,7 @@ class productController extends Controller
     public function destroy($id){
         $product = Product::find($id);
         $product->delete();
-        return redirect()->back()->with('success', 'Product Deleted Successfully');
+        return redirect()->back()->with('message', 'Product Deleted Successfully');
     }
 
 

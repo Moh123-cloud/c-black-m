@@ -1,8 +1,6 @@
 @extends('master')
 
 @section('content')
-
-<div class="row">
     {{-- Owl Corousel --}}
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
@@ -49,9 +47,9 @@
 
     {{-- All products Display --}}
 
-    <div class="category-block row container">
+    <div class="category-block">
 
-        <div class="trending-wrapper ">
+        <div class="trending-wrapper">
             <h1>Products</h1>
         
             @foreach ($product as $item)          
@@ -68,9 +66,7 @@
     
         {{-- Phones Display --}}
         <div class="trending-wrapper">
-        <a href="{{ route('phone') }}">
-            <h2>Phones  accessories</h2>
-        </a>
+        <h2>Phones and accessories</h2>
         @foreach ($phone as $item)          
                 <div class="trending-item">  
                     <a href="details/{{$item['id']}}">             
@@ -85,9 +81,7 @@
         
         {{-- Electronics category --}}
         <div class="trending-wrapper">
-            <a href="{{ route('electronic') }}">
-                <h2>Electronics</h2>
-            </a>
+            <h2>Electronics</h2>
             @foreach ($electronic as $item)          
                 <div class="trending-item">  
                     <a href="details/{{$item['id']}}">             
@@ -102,9 +96,7 @@
 
         {{-- Furniture Display --}}
         <div class="trending-wrapper">
-            <a href="{{ route('furniture') }}">
-                <h2>Furnitures</h2>
-            </a>
+            <h2>Furnitures</h2>
             @foreach ($furniture as $item)          
                 <div class="trending-item">  
                     <a href="details/{{$item['id']}}">             
@@ -120,9 +112,7 @@
     
         {{-- Computer Accessories Display --}}
         <div class="trending-wrapper">
-        <a href="{{ route('computer') }}">
-            <h2>Computer Accessories</h2>
-        </a>
+        <h2>Computer Accessories</h2>
         @foreach ($computer as $item)          
                 <div class="trending-item">  
                     <a href="details/{{$item['id']}}">             
@@ -139,9 +129,7 @@
     
         {{-- Sports $Gaming --}}
         <div class="trending-wrapper">
-            <a href="{{ route('sport') }}">
-                <h2>Sports and Games</h2>
-            </a>
+            <h2>Sports & Gaming</h2>
             @foreach ($sport as $item)          
                 <div class="trending-item">  
                     <a href="details/{{$item['id']}}">             
@@ -158,9 +146,7 @@
     
         {{-- Fashion Display --}}
         <div class="trending-wrapper">
-            <a href="{{ route('fashion') }}">
-                <h2>Fashion</h2>
-            </a>
+            <h2>Fashion</h2>
             @foreach ($fashion as $item)          
                 <div class="trending-item">  
                     <a href="details/{{$item['id']}}">             
@@ -174,7 +160,7 @@
         </div><br><br>
     </div>
 
-</div>
+
         
     
 @endsection 

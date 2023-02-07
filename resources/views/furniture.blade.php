@@ -45,7 +45,7 @@
     </div>
 
         {{-- Furniture Display --}}
-        <div class="trending-wrapper">
+        <div class="trending-wrapper slider-container" type>
             <h2>Furnitures</h2>
             @foreach ($product as $item)          
                 <div class="trending-item">  

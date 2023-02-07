@@ -2,6 +2,18 @@
 
 
 @section('content')
+    <div align="center" style="padding: 30px;">
+        <div>
+            @if(session()->has('success'))
+                <div class="alert alert-success" id="alert">
+                    <button type="button" class="close" data-dismiss="alert">x</button>
+                    {{ session()->get('success') }}
+                </div>
+            @endif
+
+        </div>
+    </div>
+
     <h1>Update your products</h1>
 
 
@@ -17,11 +29,11 @@
             <label for="exampleFormControlSelect1">Category</label>
             <select class="form-control" id="exampleFormControlSelect1" name="category" value="{{ $products->category }}" required>
                 <option>Select</option>
-                <option>Phone $ Accessories</option>
+                <option>Phone & Accessories</option>
                 <option>Electronics</option>
                 <option>Fashion</option>
                 <option>Furniture</option>
-                <option>Sports $ Gaming</option>
+                <option>Sports & Gaming</option>
                 <option>Computer Accessories</option>
             </select>
 
@@ -30,7 +42,7 @@
         <div class="form-group">
             <label for="formGroupExampleInput2">Description</label>
             <input type="text" name="description" class="form-control" id="formGroupExampleInput2"
-                value="{{ $products->description }}">
+                value="{{ $products->description }}" required>
         </div>
 
         <div class="form-group">

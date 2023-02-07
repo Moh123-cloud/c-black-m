@@ -33,7 +33,7 @@ class sellController extends Controller
         $product->images = $imagename;
         $product->save();
 
-        return redirect()->back();
+        return redirect()->back()->with('message', 'Product added Successfully!');
     
 
     }
