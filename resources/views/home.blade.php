@@ -49,10 +49,10 @@
 
     {{-- All products Display --}}
 
-    <div class="category-block row container">
+    <div class="category-block row container trending-products">
 
-        <div class="trending-wrapper ">
-            <h1>Products</h1>
+        <h1>Products</h1>
+        <div class="trending-wrapper">
         
             @foreach ($product as $item)          
                 <div class="trending-item">  
@@ -67,10 +67,10 @@
         </div><br><br>
     
         {{-- Phones Display --}}
-        <div class="trending-wrapper">
         <a href="{{ route('phone') }}">
             <h2>Phones  accessories</h2>
         </a>
+        <div class="trending-wrapper">
         @foreach ($phone as $item)          
                 <div class="trending-item">  
                     <a href="details/{{$item['id']}}">             
@@ -84,10 +84,10 @@
         </div><br><br>
         
         {{-- Electronics category --}}
+        <a href="{{ route('electronic') }}">
+            <h2>Electronics</h2>
+        </a>
         <div class="trending-wrapper">
-            <a href="{{ route('electronic') }}">
-                <h2>Electronics</h2>
-            </a>
             @foreach ($electronic as $item)          
                 <div class="trending-item">  
                     <a href="details/{{$item['id']}}">             
@@ -101,10 +101,10 @@
         </div><br><br>
 
         {{-- Furniture Display --}}
+        <a href="{{ route('furniture') }}">
+            <h2>Furnitures</h2>
+        </a>
         <div class="trending-wrapper">
-            <a href="{{ route('furniture') }}">
-                <h2>Furnitures</h2>
-            </a>
             @foreach ($furniture as $item)          
                 <div class="trending-item">  
                     <a href="details/{{$item['id']}}">             
@@ -119,11 +119,11 @@
     
     
         {{-- Computer Accessories Display --}}
-        <div class="trending-wrapper">
         <a href="{{ route('computer') }}">
             <h2>Computer Accessories</h2>
         </a>
-        @foreach ($computer as $item)          
+        <div class="trending-wrapper">
+            @foreach ($computer as $item)          
                 <div class="trending-item">  
                     <a href="details/{{$item['id']}}">             
                         <img src="image/{{ $item->images }}" alt="Photo of the product" class="product-img">
@@ -138,10 +138,10 @@
     
     
         {{-- Sports $Gaming --}}
+        <a href="{{ route('sport') }}">
+            <h2>Sports and Games</h2>
+        </a>
         <div class="trending-wrapper">
-            <a href="{{ route('sport') }}">
-                <h2>Sports and Games</h2>
-            </a>
             @foreach ($sport as $item)          
                 <div class="trending-item">  
                     <a href="details/{{$item['id']}}">             
@@ -157,10 +157,10 @@
     
     
         {{-- Fashion Display --}}
+        <a href="{{ route('fashion') }}">
+            <h2>Fashion</h2>
+        </a>
         <div class="trending-wrapper">
-            <a href="{{ route('fashion') }}">
-                <h2>Fashion</h2>
-            </a>
             @foreach ($fashion as $item)          
                 <div class="trending-item">  
                     <a href="details/{{$item['id']}}">             
