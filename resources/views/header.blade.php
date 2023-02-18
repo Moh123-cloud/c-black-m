@@ -20,6 +20,7 @@ $total = productController::index();
                 <a class="nav-link" href="{{ route('/home') }}">Home <span class="sr-only">(current)</span></a>
             </li>
 
+
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -39,7 +40,7 @@ $total = productController::index();
         </ul>
         <form class="form-inline my-2 my-lg-0 navbar-left" action="{{route('search')}}" method="post">
             @csrf
-            <input class="form-control mr-sm-2 search search-box" type="search" placeholder="Search Title, Category or Description" aria-label="Search" name="search">
+            <input class="form-control mr-sm-2 search" type="search" placeholder="Search Title, Category or Description" aria-label="Search" name="search">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
         </form>
 
@@ -55,14 +56,15 @@ $total = productController::index();
                     </li>
 
                     <li class="nav-item ">
-                        <a class="nav-link" href="{{ route('sell') }}">SELL</a>
+                        <a class="nav-link" href="{{ route('sell') }}">Sell Here</a>
                     </li>
 
-            
-                    <form action="{{ route('logout') }}" method="POST">
-                        @csrf
-                        <button type="submit">Logout</button>
-                    </form>
+                    <li class="nav-item">
+                        <form action="{{ route('logout') }}" method="POST">
+                            @csrf
+                            <button type="submit">Logout</button>
+                        </form>
+                    </li>
                 @else
                     <li class="nav-item">
                         <a class="btn btn-primary ml-lg-3" href="{{ Route('login') }}"> Login</a>

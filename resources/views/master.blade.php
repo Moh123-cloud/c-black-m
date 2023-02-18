@@ -30,11 +30,63 @@
 </body>
 
 <style>
+
+     /* Search */
+    .search {
+        width: 400px !important;
+
+    }
+
+
+    /* Corousel */
     .carousel-item img {
-        width: 70vw;
+        width: 100vw;
         height: 50vh !important;
     }
 
+   
+
+
+    /* Products Page*/
+
+    .container{
+        width: 100% !important;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .trending-wrapper{
+        width: 100% !important;
+        margin: 2px !important;
+        margin-bottom: 50px;
+        display: flex !important;
+        flex-wrap: wrap !important;
+    }
+
+    .trending-item{
+        float:left !important;
+        width: 16.66% !important;
+        max-width: 100%;
+        padding: 5px;
+        flex: 1 !important;
+        margin: 0.5px !important;
+        text-align: center !important;
+        
+    }
+    
+    .trending-item:hover{
+        transform: scale(1.01) !important;
+    }
+
+    .product-img {
+        height: 200px !important;
+        object-fit: cover;
+        border-radius: 3px;
+        width: 15vw;
+    }
+
+ 
+    /* Sell form */
     .sellForm {
         margin-top: 20px;
         margin-left: 40px;
@@ -42,78 +94,27 @@
         padding: 10px;
     }
 
-    .search {
-        width: 1000px;
+   
 
-    }
-
-    .container{
-        align-items: center;
-        justify-content: center;
-    }
-
-    .product-img {
-        /* width: 100px !important; */
-        height: 200px !important;
-        object-fit: cover;
-        border-radius: 3px;
-        width: 15vw;
-    }
-
-    .category-block{
-        display: flex !important;
-        flex-wrap: wrap !important;
-        width: 100%;
-        padding: 10px;
-        /* margin: 20px; */
-
-    }
- 
-    .trending-wrapper{
-        margin: 2px !important;
-        margin-bottom: 50px;
-        
-        display: flex !important;
-        justify-content: center !important;
-        flex-wrap: wrap !important;
-
-
-    }
-
-    .trending-item{
-        float:left !important;
-        width: 16.66% !important;
-        max-width: 100%;
-        display:block !important;
-        justify-content: space-between !important;
-        padding: 5px;
-
-        flex: 1 !important;
-        margin: 0.5px !important;
-        text-align: center !important;
-        
-    }
-
-    .trending-item:hover{
-        transform: scale(1.01) !important;
-    }
-
+    
+    /* Details Page */
     .detail-container{
         margin: 50px;
     }
 
-    .update-img{
-        width: 60px !important;
-        height: 50px !important;
-    }
     .detail-img{
         width: 400px !important;
         height: 350px !important;
     }
 
-    .search-box{
-        width: 500px !important;
+
+    /* Update page */
+    .update-img{
+        width: 60px !important;
+        height: 50px !important;
     }
+    
+
 
     a{
         text-decoration:none !important;
@@ -198,12 +199,7 @@
         }
     } */
 
-    .trending-products {
-        display: grid;
-        grid-template-columns: repeat(6, minmax(0, 1fr));
-        grid-gap: 20px;
-        padding: 5px;
-    }
+  
 
     @media screen and (min-width: 1024px) {
         /* .trending-products {

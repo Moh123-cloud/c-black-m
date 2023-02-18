@@ -52,24 +52,24 @@ class homeController extends Controller
     {
         if (Auth::id()) {
             if (Auth::user()->usertype == '0') {
-                $product = Product::all();
+                $product = Product::inRandomOrder()->limit(36)->get();
 
-                $phone = Product::where('category', 'Phone & Accessories')
+                $phone = Product::where('category', 'Phone & Accessories')->inRandomOrder()->limit(12)
                     ->get();
 
-                $computer = Product::where('category', 'Computer Accessories')
+                $computer = Product::where('category', 'Computer Accessories')->inRandomOrder()->limit(12)
                     ->get();
 
-                $electronic = Product::where('category', 'Electronics')
+                $electronic = Product::where('category', 'Electronics')->inRandomOrder()->limit(12)
                     ->get();
 
-                $sport = Product::where('category', 'Sports & Gaming')
+                $sport = Product::where('category', 'Sports & Gaming')->inRandomOrder()->limit(12)
                     ->get();
 
-                $furniture = Product::where('category', 'Furniture')
+                $furniture = Product::where('category', 'Furniture')->inRandomOrder()->limit(12)
                     ->get();
 
-                $fashion = Product::where('category', 'Fashion')
+                $fashion = Product::where('category', 'Fashion')->inRandomOrder()->limit(12)
                     ->get();
 
                 return view('home', compact('product', 'phone', 'computer', 'electronic', 'sport', 'furniture', 'fashion'));

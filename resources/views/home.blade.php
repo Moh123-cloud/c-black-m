@@ -49,9 +49,9 @@
 
     {{-- All products Display --}}
 
-    <div class="category-block row container trending-products">
+    <div class="container trending-products">
 
-        <h1>Products</h1>
+        <h1>Products</h1> 
         <div class="trending-wrapper">
         
             @foreach ($product as $item)          
@@ -69,6 +69,7 @@
         {{-- Phones Display --}}
         <a href="{{ route('phone') }}">
             <h2>Phones  accessories</h2>
+            <h5>View more</h5>
         </a>
         <div class="trending-wrapper">
         @foreach ($phone as $item)          
@@ -86,6 +87,7 @@
         {{-- Electronics category --}}
         <a href="{{ route('electronic') }}">
             <h2>Electronics</h2>
+            <h5>View more</h5>
         </a>
         <div class="trending-wrapper">
             @foreach ($electronic as $item)          
@@ -102,7 +104,8 @@
 
         {{-- Furniture Display --}}
         <a href="{{ route('furniture') }}">
-            <h2>Furnitures</h2>
+            <h2>Furnitures</h2> 
+            <h5>View more</h5>
         </a>
         <div class="trending-wrapper">
             @foreach ($furniture as $item)          
@@ -121,6 +124,7 @@
         {{-- Computer Accessories Display --}}
         <a href="{{ route('computer') }}">
             <h2>Computer Accessories</h2>
+            <h5>View more</h5>
         </a>
         <div class="trending-wrapper">
             @foreach ($computer as $item)          
@@ -140,6 +144,7 @@
         {{-- Sports $Gaming --}}
         <a href="{{ route('sport') }}">
             <h2>Sports and Games</h2>
+            <h5>View more</h5>
         </a>
         <div class="trending-wrapper">
             @foreach ($sport as $item)          
@@ -159,6 +164,7 @@
         {{-- Fashion Display --}}
         <a href="{{ route('fashion') }}">
             <h2>Fashion</h2>
+            <h5>View more</h5>
         </a>
         <div class="trending-wrapper">
             @foreach ($fashion as $item)          
