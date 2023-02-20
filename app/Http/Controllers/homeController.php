@@ -88,6 +88,12 @@ class homeController extends Controller
         return view('details', ['product' => $data]);
     }
 
+    //Controller for All Products
+    public function all(){
+        $all = Product::all();
+        return view('all_products', ['product' => $all]);
+    }
+
     //Controller for phone
     public function phone(){
         $phone = Product::where('category', 'Phone & Accessories')

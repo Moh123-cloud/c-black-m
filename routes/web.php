@@ -82,6 +82,9 @@ Route::middleware([
 
 
 //Route for phone category blade
+Route::get('all', [homeController::class, 'all'])->name('all');
+
+//Route for phone category blade
 Route::get('phone', [homeController::class, 'phone'])->name('phone');
 
 //Route for electronics category blade

@@ -51,7 +51,10 @@
 
     <div class="container trending-products">
 
-        <h1>Products</h1> 
+        <a href="{{ route('all') }}">
+            <h2>All Products</h2>
+            <h5>View more</h5>
+        </a>
         <div class="trending-wrapper">
         
             @foreach ($product as $item)          
