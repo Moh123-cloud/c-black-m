@@ -51,13 +51,16 @@
 
     <div class="container trending-products">
 
-        <a href="{{ route('all') }}">
-            <h2>All Products</h2>
-            <h5>View more</h5>
-        </a>
-        <div class="trending-wrapper">
         
+        <div class="trending-wrapper">
+
+            <a href="{{ route('all') }}">
+                <h2>All Products</h2>
+                <h5>View more</h5>
+            </a>
+            
             @foreach ($product as $item)          
+                   
                 <div class="trending-item">  
                     <a href="details/{{$item['id']}}">             
                         <img src="image/{{ $item->images }}" alt="Photo of the product" class="product-img">
@@ -66,34 +69,52 @@
                         <h5>{{ $item->price }}</h5>
                     </a>
                 </div>  
+
             @endforeach
         </div><br><br>
     
         {{-- Phones Display --}}
-        <a href="{{ route('phone') }}">
-            <h2>Phones  accessories</h2>
-            <h5>View more</h5>
-        </a>
         <div class="trending-wrapper">
-        @foreach ($phone as $item)          
-                <div class="trending-item">  
-                    <a href="details/{{$item['id']}}">             
-                        <img src="image/{{ $item->images }}" alt="Photo of the product" class="product-img">
-                        <h4>{{ $item->title }}</h3>
-                        <p>{{ $item->description }}</p>
-                        <h5>{{ $item->price }}</h5>
+            @if (count($phone) > 0)
+
+                    <a href="{{ route('phone') }}">
+                        <h2>Phones  accessories</h2>
+                        <h5>View more</h5>
                     </a>
-                </div>  
+
+            @endif
+
+            @foreach ($phone as $item)          
+
+                
+                    
+                    <div class="trending-item">  
+                        <a href="details/{{$item['id']}}">             
+                            <img src="image/{{ $item->images }}" alt="Photo of the product" class="product-img">
+                            <h4>{{ $item->title }}</h3>
+                            <p>{{ $item->description }}</p>
+                            <h5>{{ $item->price }}</h5>
+                        </a>
+                    </div>  
+
+                
             @endforeach
         </div><br><br>
         
         {{-- Electronics category --}}
-        <a href="{{ route('electronic') }}">
-            <h2>Electronics</h2>
-            <h5>View more</h5>
-        </a>
         <div class="trending-wrapper">
-            @foreach ($electronic as $item)          
+
+            @if (count($electronic)>0)
+
+                <a href="{{ route('electronic') }}">
+                    <h2>Electronics</h2>
+                    <h5>View more</h5>
+                </a>
+
+            @endif
+
+            @foreach ($electronic as $item) 
+
                 <div class="trending-item">  
                     <a href="details/{{$item['id']}}">             
                         <img src="image/{{ $item->images }}" alt="Photo of the product" class="product-img">
@@ -102,35 +123,52 @@
                         <h5>{{ $item->price }}</h5>
                     </a>
                 </div>  
+            
+                
             @endforeach
         </div><br><br>
 
         {{-- Furniture Display --}}
-        <a href="{{ route('furniture') }}">
-            <h2>Furnitures</h2> 
-            <h5>View more</h5>
-        </a>
         <div class="trending-wrapper">
-            @foreach ($furniture as $item)          
-                <div class="trending-item">  
-                    <a href="details/{{$item['id']}}">             
-                        <img src="image/{{ $item->images }}" alt="Photo of the product" class="product-img">
-                        <h4>{{ $item->title }}</h3>
-                        <p>{{ $item->description }}</p>
-                        <h5>{{ $item->price }}</h5>
+            @if (count($furniture) > 0)
+                <div class="product-header">
+                    <a href="{{ route('furniture') }}">
+                        <h2>Furnitures</h2> 
+                        <h5>View more</h5>
                     </a>
-                </div>  
+
+                </div><br>
+
+                <div><br></div>
+            @endif
+            @foreach ($furniture as $item) 
+                
+                    <div class="trending-item">  
+                        <a href="details/{{$item['id']}}">             
+                            <img src="image/{{ $item->images }}" alt="Photo of the product" class="product-img">
+                            <h4>{{ $item->title }}</h3>
+                            <p>{{ $item->description }}</p>
+                            <h5>{{ $item->price }}</h5>
+                        </a>
+                    </div>  
+
+                
             @endforeach
         </div><br><br>
     
     
         {{-- Computer Accessories Display --}}
-        <a href="{{ route('computer') }}">
-            <h2>Computer Accessories</h2>
-            <h5>View more</h5>
-        </a>
         <div class="trending-wrapper">
+
+            @if (count($computer) > 1)
+                <a href="{{ route('computer') }}">
+                    <h2>Computer Accessories</h2>
+                    <h5>View more</h5>
+                </a>
+            @endif
+
             @foreach ($computer as $item)          
+                    
                 <div class="trending-item">  
                     <a href="details/{{$item['id']}}">             
                         <img src="image/{{ $item->images }}" alt="Photo of the product" class="product-img">
@@ -138,19 +176,27 @@
                         <p>{{ $item->description }}</p>
                         <h5>{{ $item->price }}</h5>
                     </a>
-                </div>  
+                </div> 
+
             @endforeach
         </div><br><br>
 
     
     
         {{-- Sports $Gaming --}}
-        <a href="{{ route('sport') }}">
-            <h2>Sports and Games</h2>
-            <h5>View more</h5>
-        </a>
+        
         <div class="trending-wrapper">
-            @foreach ($sport as $item)          
+
+            @if (count($sport) > 0)
+                    
+                <a href="{{ route('sport') }}">
+                    <h2>Sports and Games</h2>
+                    <h5>View more</h5>
+                </a>
+
+            @endif
+
+            @foreach ($sport as $item)  
                 <div class="trending-item">  
                     <a href="details/{{$item['id']}}">             
                         <img src="image/{{ $item->images }}" alt="Photo of the product" class="product-img">
@@ -158,27 +204,38 @@
                         <p>{{ $item->description }}</p>
                         <h5>{{ $item->price }}</h5>
                     </a>
-                </div>  
+                </div>               
             @endforeach
         </div><br><br>
     
     
     
         {{-- Fashion Display --}}
-        <a href="{{ route('fashion') }}">
-            <h2>Fashion</h2>
-            <h5>View more</h5>
-        </a>
+        
         <div class="trending-wrapper">
-            @foreach ($fashion as $item)          
-                <div class="trending-item">  
-                    <a href="details/{{$item['id']}}">             
-                        <img src="image/{{ $item->images }}" alt="Photo of the product" class="product-img">
-                        <h4>{{ $item->title }}</h3>
-                        <p>{{ $item->description }}</p>
-                        <h5>{{ $item->price }}</h5>
-                    </a>
-                </div>  
+
+            @if (count($fashion) > 0)
+            
+                <a href="{{ route('fashion') }}">
+                    <h2>Fashion</h2>
+                    <h5>View more</h5>
+                </a>
+
+            @endif
+            
+            @foreach ($fashion as $item)
+               
+
+                    <div class="trending-item">  
+                        <a href="details/{{$item['id']}}">             
+                            <img src="image/{{ $item->images }}" alt="Photo of the product" class="product-img">
+                            <h4>{{ $item->title }}</h3>
+                            <p>{{ $item->description }}</p>
+                            <h5>{{ $item->price }}</h5>
+                        </a>
+                    </div>  
+
+               
             @endforeach
         </div><br><br>
     </div>

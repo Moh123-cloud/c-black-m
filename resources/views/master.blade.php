@@ -31,6 +31,11 @@
 
 <style>
 
+    ul {
+        list-style-type: none;
+    }
+
+
      /* Search */
     .search {
         width: 400px !important;

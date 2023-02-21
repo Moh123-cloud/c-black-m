@@ -53,14 +53,14 @@
 
         <div class="form-group">
             <label for="formGroupExampleInput2">Price</label>
-            <input type="text" name="price" class="form-control" id="formGroupExampleInput2" value="{{ $products->price }}"
+            <input type="number" name="price" class="form-control" id="formGroupExampleInput2" value="{{ $products->price }}"
                 required>
         </div>
 
         <div class="form-group">
-            <label for="formGroupExampleInput2">Phone Number</label>
+            <label for="formGroupExampleInput2">Phone Number (+254*********)</label>
             <input type=" number" name="phone" class="form-control" id="formGroupExampleInput2" value="{{ $products->phone }}"
-                required>
+                required pattern="[0-9,+]{13}">
         </div>
 
        <div class="form-group">

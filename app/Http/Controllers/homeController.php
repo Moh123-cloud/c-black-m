@@ -37,7 +37,7 @@ class homeController extends Controller
                 $fashion = Product::where('category', 'Fashion')
                     ->get();
 
-                return view('home', compact('product', 'phone', 'computer', 'electronic', 'sport', 'furniture', 'fashion'));
+                return view('/home', compact('product', 'phone', 'computer', 'electronic', 'sport', 'furniture', 'fashion'));
             } else {
                 return view('admin.home');
             }

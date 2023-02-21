@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\homeController;
 use App\Http\Controllers\sellController;
 use App\Http\Controllers\productController;
+use App\Http\Controllers\footerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -101,3 +102,19 @@ Route::get('fashion', [homeController::class, 'fashion'])->name('fashion');
 
 //Route for sport category blade
 Route::get('sport', [homeController::class, 'sport'])->name('sport');
+
+
+//Footer routes
+
+//About us page
+Route::get('about', [footerController::class, 'about'])->name('about');
+
+//Safety page
+Route::get('safety', [footerController::class, 'safety'])->name('safety');
+
+//Privacy page
+Route::get('privacy', [footerController::class, 'privacy'])->name('privacy');
+
+//Contact Us page
+Route::get('contact', [footerController::class, 'contact'])->name('contact');
+

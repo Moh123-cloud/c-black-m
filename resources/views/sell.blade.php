@@ -54,14 +54,14 @@
 
         <div class="form-group">
             <label for="formGroupExampleInput2">Price</label>
-            <input type="text" name="price" class="form-control" id="formGroupExampleInput2" placeholder="eg Ksh 12000"
-                required>
+            <input type="number" name="price" class="form-control" id="formGroupExampleInput2" placeholder="eg Ksh 12000"
+                required pattern="[0-9]{10}">
         </div>
 
         <div class="form-group">
-            <label for="formGroupExampleInput2">Phone Number</label>
-            <input type=" number" name="phone" class="form-control" id="formGroupExampleInput2" placeholder="eg 0712345678"
-                required>
+            <label for="formGroupExampleInput2">Phone Number (+254*********)</label>
+            <input type=" tel" name="phone" class="form-control" id="formGroupExampleInput2" placeholder="eg +254712345678"
+                required pattern="[0-9,+]{13}">
         </div>
 
        <div class="form-group">

@@ -5,27 +5,35 @@
             <ul>
                 <li><a href="#">support@blackm.co.ke</a></li>
                 <li><a href="#">admin@blackm.co.ke</a></li>
-                <li><a href="#">Safety Tips</a></li>
-                <li><a href="#">Customer Care</a></li>
+                <li><a href="{{ route('safety') }}">Safety Tips</a></li>
             </ul>
         </div>
 
 
         <div class="footer-col">
             <ul>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Contact Us</a></li>
-                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="{{ route('about') }}">About Us</a></li>
+                <li><a href=" {{ route('contact') }}">Contact Us</a></li>
+                <li><a href="{{ route('privacy') }}">Privacy Policy</a></li>
+                <li></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href=" {{ route('sell') }}">Sell</a></li>
+                <li><a href="#">Your Products</a></li>
                 <li></li>
             </ul>
         </div>
         <div class="footer-col">
             <ul>
-                <li><a href="#">Phone & Accessories</a></li>
-                <li><a href="#">Electronics</a></li>
-                <li><a href="#">Fashion</a></li>
-                <li><a href="#">Furniture</a></li>
-                <li><a href="#">Sports $ Games</a></li>
+                <li><a href="{{ route('phone') }}">Phone & Accessories</a></li>
+                <li><a href="{{ route('electronic') }}">Electronics</a></li>
+                <li><a href="{{ route('fashion') }}">Fashion</a></li>
+                <li><a href="{{ route('furniture') }}">Furniture</a></li>
+                <li><a href="{{ route('sport') }}">Sports $ Games</a></li>
             </ul>
         </div>
 
