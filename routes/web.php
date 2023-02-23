@@ -19,15 +19,22 @@ use App\Http\Controllers\footerController;
 
 //Route for home
 Route::get('/', function () {
-    return view('/home');
-});  
+    return view('/home')->middleware(
+        'auth',
+        'verified'
+    );;
+});
 
 
 //Route for home
-Route::get('/home', [homeController::class, 'index'])->name('/home');
+Route::get('/home', [homeController::class, 'index'])->name('/home')->middleware(
+    'auth','verified'
+);
  
 //Route for main page
-Route::get('/', [homeController::class, 'main']);
+Route::get('/', [homeController::class, 'main'])->middleware(
+    'auth','verified'
+);;
 
 //Route for phone page
 Route::get('/phone', [homeController::class, 'phone']);
