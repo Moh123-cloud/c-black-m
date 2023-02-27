@@ -1,6 +1,7 @@
 <footer>
 
     <div class="footer-container">
+        
         <div class="footer-col">
             <ul>
                 <li><a href="#">support@blackm.co.ke</a></li>
@@ -27,6 +28,7 @@
                 <li></li>
             </ul>
         </div>
+
         <div class="footer-col">
             <ul>
                 <li><a href="{{ route('phone') }}">Phone & Accessories</a></li>
