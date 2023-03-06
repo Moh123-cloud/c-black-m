@@ -67,10 +67,12 @@
                         <a href="details/{{$item['id']}}">  
                             <div class="product-img-wrapper">
                                 <img src="image/{{ $item->images }}" alt="Photo of the product" class="product-img">                           
-                            </div>           
-                            <h4>{{ $item->title }}</h3>
-                            <p>{{ $item->description }}</p>
-                            <h5> Ksh {{ $item->price }}</h5>
+                            </div>  
+                            <div class="product-desc">
+                                <h5>{{ $item->title }}</h5>
+                                <p>{{ $item->description }}</p>
+                                <h6> Ksh {{ $item->price }}</h6>            
+                            </div>         
                         </a>
                     </div>  
                 @endforeach

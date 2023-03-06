@@ -27,12 +27,12 @@ Route::get('/', function () {
 
 
 //Route for home
-Route::get('/home', [homeController::class, 'index'])->name('/home')->middleware(
+/* Route::get('/home', [homeController::class, 'index'])->name('/home')->middleware(
     'auth','verified'
-);
+); */
  
 //Route for main page
-Route::get('/', [homeController::class, 'main'])->middleware(
+Route::get('/', [homeController::class, 'main'])->name('/')->middleware(
     'auth','verified'
 );;
 
@@ -124,4 +124,6 @@ Route::get('privacy', [footerController::class, 'privacy'])->name('privacy');
 
 //Contact Us page
 Route::get('contact', [footerController::class, 'contact'])->name('contact');
+
+
 

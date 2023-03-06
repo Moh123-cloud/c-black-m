@@ -17,7 +17,7 @@ class homeController extends Controller
     {
         if (Auth::id()) {
             if (Auth::user()->usertype == '0') {
-                $product = Product::all();
+                $product = Product::inRandomOrder()->limit(36)->get();
 
                 $phone = Product::where('category', 'Phone & Accessories')
                     ->get();
@@ -37,9 +37,9 @@ class homeController extends Controller
                 $fashion = Product::where('category', 'Fashion')
                     ->get();
 
-                return view('/home', compact('product', 'phone', 'computer', 'electronic', 'sport', 'furniture', 'fashion'));
+                return view('home', compact('product', 'phone', 'computer', 'electronic', 'sport', 'furniture', 'fashion'));
             } else {
-                return view('admin.home');
+                return view('admin.update');
             }
         } else {
             return redirect('/login');
@@ -74,7 +74,7 @@ class homeController extends Controller
 
                 return view('home', compact('product', 'phone', 'computer', 'electronic', 'sport', 'furniture', 'fashion'));
             } else {
-                return view('admin.home');
+                return view('admin.update');
             }
         } else {
             return redirect('/login');

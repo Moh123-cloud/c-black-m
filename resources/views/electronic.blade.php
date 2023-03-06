@@ -46,7 +46,7 @@
 
         
         {{-- Electronics category --}}
-        <div class="trending-wrapper">
+     {{--    <div class="trending-wrapper">
             <h2>Electronics</h2>
             @foreach ($product as $item)          
                 <div class="trending-item">  
@@ -58,7 +58,33 @@
                     </a>
                 </div>  
             @endforeach
-        </div><br><br>
+        </div><br><br> --}}
+
+           <div class="trending-wrapper">
+            <div class="product-header">
+                <div class="all-products-link">
+                    <a href="{{ route('electronic') }}">
+                        <h2>Electronics</h2> 
+                    </a>
+                </div>
+            </div>
+
+            <div class="products-list">
+                @foreach ($product as $item) 
+                    
+                    <div class="trending-item">  
+                        <a href="details/{{$item['id']}}">             
+                            <img src="image/{{ $item->images }}" alt="Photo of the product" class="product-img">
+                            <h4>{{ $item->title }}</h3>
+                            <p>{{ $item->description }}</p>
+                            <h5>Ksh {{ $item->price }}</h5>
+                        </a>
+                    </div>  
+
+                    
+                @endforeach
+            </div>
+        </div>
 
         
     </div>

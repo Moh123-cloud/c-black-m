@@ -45,7 +45,7 @@
     </div>
 
         {{-- All Products Display --}}
-        <div class="trending-wrapper slider-container" type>
+      {{--   <div class="trending-wrapper slider-container" type>
             <h2>All Products</h2>
             @foreach ($product as $item)          
                 <div class="trending-item">  
@@ -60,7 +60,33 @@
         </div><br><br>
         <br><br>
     </div>
+ --}}
 
+    
+    <div class="trending-wrapper">
+
+        <div class="product-header">
+            <a href="{{ route('all') }}">
+                <h2>All Products</h2>
+            </a>
+        </div>
+        
+        <div class="products-list">
+            @foreach ($product as $item)          
+                <div class="trending-item">  
+                    <a href="details/{{$item['id']}}">  
+                        <div class="product-img-wrapper">
+                            <img src="image/{{ $item->images }}" alt="Photo of the product" class="product-img">                           
+                        </div>           
+                        <h4>{{ $item->title }}</h3>
+                        <p>{{ $item->description }}</p>
+                        <h5> Ksh {{ $item->price }}</h5>
+                    </a>
+                </div>  
+            @endforeach
+        </div>
+
+    </div>
 
         
     

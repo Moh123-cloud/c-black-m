@@ -46,20 +46,30 @@
 
     
     
-        {{-- Fashion Display --}}
-            <div class="trending-wrapper">
-                <h2>Fashion</h2>
-                @foreach ($product as $item)          
-                    <div class="trending-item">  
-                        <a href="details/{{$item['id']}}">             
-                            <img src="image/{{ $item->images }}" alt="Photo of the product" class="product-img">
-                            <h4>{{ $item->title }}</h3>
-                            <p>{{ $item->description }}</p>
-                            <h5>Ksh {{ $item->price }}</h5>
-                        </a>
-                    </div>  
-                @endforeach
-            </div><br><br>
+    {{-- Fashion Display --}}
+    <div class="trending-wrapper">
+        <div class="product-header">
+                <a href="{{ route('fashion') }}">
+                    <h2>Fashion</h2>
+                </a>
+        </div>
+
+        <div class="products-list">
+
+            @foreach ($product as $item)
+
+                <div class="trending-item">  
+                    <a href="details/{{$item['id']}}">             
+                        <img src="image/{{ $item->images }}" alt="Photo of the product" class="product-img">
+                        <h4>{{ $item->title }}</h3>
+                        <p>{{ $item->description }}</p>
+                        <h5>Ksh {{ $item->price }}</h5>
+                    </a>
+                </div>  
+
+            @endforeach
+
+        </div>
     </div>
 
 

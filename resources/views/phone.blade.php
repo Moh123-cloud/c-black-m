@@ -45,7 +45,7 @@
     </div>
     
     {{-- Phones Display --}}
-    <div class="trending-wrapper">
+  {{--   <div class="trending-wrapper">
 
         <a href="{{ route('phone') }}">
             <h2>Phones  accessories</h2>
@@ -61,8 +61,33 @@
                     </a>
                 </div>  
             @endforeach
-    </div><br><br>
+    </div><br><br> --}}
+
+       <div class="trending-wrapper">
+
+            <div class="product-header"> 
+              
+                <a href="{{ route('phone') }}">
+                    <h2>Phones  accessories</h2>
+                </a>
 
 
+            </div>
+
+            <div class="products-list">
+
+                @foreach ($product as $item)              
+                    <div class="trending-item">  
+                        <a href="details/{{$item['id']}}">             
+                            <img src="image/{{ $item->images }}" alt="Photo of the product" class="product-img">
+                            <h4>{{ $item->title }}</h3>
+                            <p>{{ $item->description }}</p>
+                            <h5>Ksh {{ $item->price }}</h5>
+                        </a>
+                    </div>  
+                    
+                @endforeach
+            </div>
+        </div>
     
 @endsection 

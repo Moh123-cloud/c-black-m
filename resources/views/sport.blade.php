@@ -46,17 +46,24 @@
     
         {{-- Sports $Gaming --}}
         <div class="trending-wrapper">
-            <h2>Sports & Gaming</h2>
-            @foreach ($product as $item)          
-                <div class="trending-item">  
-                    <a href="details/{{$item['id']}}">             
-                        <img src="image/{{ $item->images }}" alt="Photo of the product" class="product-img">
-                        <h4>{{ $item->title }}</h3>
-                        <p>{{ $item->description }}</p>
-                        <h5>Ksh {{ $item->price }}</h5>
-                    </a>
-                </div>  
-            @endforeach
+            <div class="product-header">               
+                <a href="{{ route('sport') }}">
+                    <h2>Sports and Games</h2>
+                </a>
+            </div>
+
+            <div class="products-list">
+                @foreach ($product as $item)  
+                    <div class="trending-item">  
+                        <a href="details/{{$item['id']}}">             
+                            <img src="image/{{ $item->images }}" alt="Photo of the product" class="product-img">
+                            <h4>{{ $item->title }}</h3>
+                            <p>{{ $item->description }}</p>
+                            <h5>Ksh {{ $item->price }}</h5>
+                        </a>
+                    </div>               
+                @endforeach
+            </div>
         </div><br><br>
     
 

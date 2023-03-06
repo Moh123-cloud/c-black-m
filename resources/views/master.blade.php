@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Black Market</title>
+    <title>BlackM</title>
 
     {{-- Font Awesome cdn --}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -39,7 +39,7 @@
     }
 
     .toggle-btn{
-      
+        
     }
 
     .nav-details{
@@ -53,6 +53,16 @@
 
     ul .privacy{
        display: none;     
+    }
+
+    /* Header */
+    header{
+        background-color: #454545 ;
+        text-color: yellow;
+    }
+
+    body{
+        background-color: #E1D9D1;
     }
 
 
@@ -83,6 +93,8 @@
         position: absolute;
         bottom: 0;
         right: 0;
+        border: none;
+        padding-top: 15px; padding-bottom: 15px;
     }
 
 
@@ -98,7 +110,7 @@
 
 
     .trending-products{
-        margin: auto;
+        margin-left: 50px;
     }
 
     .trending-wrapper{
@@ -123,6 +135,10 @@
         max-height: 200px;
         border-radius: 3px;
         object-fit: cover;
+    }
+
+    .product-desc{
+        padding: 10px;
     }
 
     .trending-item:hover{
@@ -150,7 +166,7 @@
 
         .product-img{
             width: 100%;
-            height: 100px;
+            height: 150px;
             border-radius: 3px;
         }
 
@@ -165,7 +181,7 @@
 
     @media screen and (min-width: 320px) {
         .trending-item{
-            width: 30%;
+            width: 100px;
             margin: 10px;
         }
 
@@ -183,13 +199,13 @@
 
     @media screen and (min-width: 480px) {
         .trending-item{
-            width: 24%;
+            width: 100px;
             margin: 10px;
         }
 
         .product-img{
             width: 100%;
-            height: 150px;
+            height: 100px;
             border-radius: 3px;
         }
 
@@ -371,7 +387,13 @@
 
 
     /* Footer  */
+    footer{
+        background-color: #333;
+    }
 
+    footer ul li{
+        margin-bottom:10px;
+    }
 
     .footer-container {
         display: flex;
@@ -379,10 +401,9 @@
         flex-wrap: wrap;
         justify-content: space-between;
         padding: 20px;
-        background-color: #333;
         color: #fff;
         margin-top: 100px;
-        margin-bottom: 2px;
+        margin-bottom: px;
     }
 
     
@@ -392,7 +413,7 @@
     .social-links{
         text-align: center;
         padding-bottom: 10px;
-        margin-bottom: 20px;
+        margin-bottom: 0px;
     }
 
 </style>
