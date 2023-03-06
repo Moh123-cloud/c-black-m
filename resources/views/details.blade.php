@@ -14,7 +14,7 @@
                     <h2>{{ $product['title'] }}</h2>
                     <h3>Category: {{ $product['category'] }}</h3>
                     <h5>Description: {{ $product['description'] }}</h5>
-                    <h5>Price: {{ $product['price'] }}</h5>
+                    <h5>Price: Ksh {{ $product['price'] }}</h5>
                     <h5>Location: {{ $product['location'] }}</h5>
                     <h5>Contact: {{ $product['phone'] }}</h5>
                     

@@ -55,7 +55,7 @@
                             <img src="image/{{ $item->images }}" alt="Photo of the product" class="product-img">
                             <h4>{{ $item->title }}</h3>
                             <p>{{ $item->description }}</p>
-                            <h5>{{ $item->price }}</h5>
+                            <h5>Ksh {{ $item->price }}</h5>
                         </a>
                     </div>  
                 @endforeach

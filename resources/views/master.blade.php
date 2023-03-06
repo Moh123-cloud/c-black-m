@@ -7,6 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Black Market</title>
 
+    {{-- Font Awesome cdn --}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
         integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -35,12 +38,53 @@
         list-style-type: none;
     }
 
+    .toggle-btn{
+      
+    }
+
+    .nav-details{
+        display: flex;
+        margin: 5px !important;
+    }
+
+    .nav-products{
+        display: block;
+    }
+
+    ul .privacy{
+       display: none;     
+    }
+
 
      /* Search */
-    .search {
-        width: 400px !important;
-
+    .form-container {
+        width: 80vh;
+        margin: 0 auto;
+        margin-bottom: 20px !important;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        display: none;
+            
     }
+
+    
+
+    .search-box {
+        padding: 10px;
+        border-radius: 10px;
+        border: 1px solid #ccc;
+        font-size: 16px;
+    }
+
+    
+
+    .toggle-button {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+
 
 
     /* Corousel */
@@ -51,6 +95,7 @@
 
 
     /* Products Page*/
+
 
     .trending-products{
         margin: auto;
@@ -69,16 +114,30 @@
     .trending-item{
         width: 15%;
         margin: 10px;
+        border: 1px solid black;
+        border-radius: 4px;
     }
 
     .product-img{
-        width: 100%;
-        height: 200px;
+        max-width: 100%;
+        max-height: 200px;
         border-radius: 3px;
+        object-fit: cover;
     }
 
     .trending-item:hover{
         transform: scale(1.01) !important;
+    }
+
+    .products-none{
+        font-style: italic;
+        color: yellow;
+        margin-bottom: 300px;
+    }
+
+    .social-links{
+        justify-content: center;
+        align-items: center;
     }
 
 
@@ -96,10 +155,13 @@
         }
 
         .footer-col {
-        width: 90%;
-        text-align: center;
+            width: 100%;
+            text-align: center;
+        }
+
+
     }
-    }
+    
 
     @media screen and (min-width: 320px) {
         .trending-item{
@@ -111,6 +173,11 @@
             width: 100%;
             height: 100px;
             border-radius: 3px;
+        }
+
+        .footer-col {
+            width: 50%;
+            text-align: center;
         }
     }
 
@@ -126,13 +193,12 @@
             border-radius: 3px;
         }
 
-        .footer-col {
-            width: 45%;
-            text-align: center;
-        }
+       
     }
 
     @media screen and (min-width: 768px) {
+        
+
         .trending-item{
             width: 20%;
             margin: 10px;
@@ -144,13 +210,42 @@
             border-radius: 3px;
         }
 
-        .footer-col {
-            width: 30%;
+        .nav-products{
+            display: none !important;
+        }
+
+        .toggle-btn{
+            display: none !important;
+        }
+
+
+        .nav-details{
+            display: none;
+        }
+
+        .form-container{
+            display: block;
+            width: 80vw;
             text-align: center;
         }
+
+        .search-show{
+            display: none;
+        }
+
+
+        .footer-col {
+            width: 25%;
+            text-align: center;
+        }
+
     }
 
     @media screen and (min-width: 1024px) {
+        ul .privacy{
+            display: block;
+        }
+
         .trending-item{
             width: 16.66%;
             margin: 10px;
@@ -162,10 +257,6 @@
             border-radius: 3px;
         }
 
-        .footer-col {
-            width: 24%;
-            text-align: center;
-        }
     }
 
     @media screen and (min-width: 1200px) {
@@ -281,6 +372,7 @@
 
     /* Footer  */
 
+
     .footer-container {
         display: flex;
         flex-direction: row;
@@ -290,16 +382,18 @@
         background-color: #333;
         color: #fff;
         margin-top: 100px;
-        margin-bottom: 50px;
+        margin-bottom: 2px;
     }
 
     
 
-    .footer-col {
-        width: 30%;
+   
+    
+    .social-links{
         text-align: center;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
     }
-
 
 </style>
 

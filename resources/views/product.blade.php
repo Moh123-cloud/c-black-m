@@ -17,7 +17,7 @@
 
     <h1>Your Products</h1>
 
-    @if($products !== null)
+    @if(count($products)>0)
     <table class="table">
         <thead class="thead-dark">
             <tr>
@@ -65,7 +65,7 @@
     </table> 
 
     @else
-        {{'You have no products!'}}
+        <h3 class="products-none">You have not posted any products! To post <a href="{{ route('sell') }}">Click here</a></h3>
     @endif
 
         
