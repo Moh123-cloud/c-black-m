@@ -15,7 +15,7 @@
         </div>
     </div>
     
-    <h1>Sell Here!</h1>
+    <h1 class="py">Sell Here!</h1>
 
 
     <form action="{{ url('sellproducts') }}" class="sellForm form group" method="POST" enctype="multipart/form-data">

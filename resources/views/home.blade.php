@@ -17,15 +17,15 @@
 
             =
             <div class="item active d-block">
-                <img src="{{ url('assets/img2.jpeg') }}" class="w-100" alt="Example Image">
+                <img src="{{ url('assets/img2.jpeg') }}" class="carousel-img" alt="Example Image">
             </div>
 
             <div class="item d-block">
-                <img src="{{ url('assets/img2.jpeg') }}" alt="Example Image">
+                <img src="{{ url('assets/img4.webp') }}" class="carousel-img"  alt="Example Image">
             </div>
 
             <div class="item d-block">
-                <img src="{{ url('assets/img2.jpeg') }}" alt="Example Image">
+                <img src="{{ url('assets/img5.jpeg') }}" class="carousel-img"  alt="Example Image">
             </div>
 
             <div class="d-md-block carousel-caption d-none">
@@ -100,9 +100,11 @@
                     <div class="trending-item">  
                         <a href="details/{{$item['id']}}">             
                             <img src="image/{{ $item->images }}" alt="Photo of the product" class="product-img">
-                            <h4>{{ $item->title }}</h3>
-                            <p>{{ $item->description }}</p>
-                            <h5>Ksh {{ $item->price }}</h5>
+                            <div class="product-desc">
+                                <h4>{{ $item->title }}</h3>
+                                <p>{{ $item->description }}</p>
+                                <h5>Ksh {{ $item->price }}</h5>
+                            </div>
                         </a>
                     </div>  
                     
@@ -131,9 +133,11 @@
                     <div class="trending-item">  
                         <a href="details/{{$item['id']}}">             
                             <img src="image/{{ $item->images }}" alt="Photo of the product" class="product-img">
-                            <h4>{{ $item->title }}</h3>
-                            <p>{{ $item->description }}</p>
-                            <h5>Ksh {{ $item->price }}</h5>
+                            <div class="product-desc">
+                                <h4>{{ $item->title }}</h3>
+                                <p>{{ $item->description }}</p>
+                                <h5>Ksh {{ $item->price }}</h5>
+                            </div>
                         </a>
                     </div>  
 
@@ -163,9 +167,11 @@
                     <div class="trending-item">  
                         <a href="details/{{$item['id']}}">             
                             <img src="image/{{ $item->images }}" alt="Photo of the product" class="product-img">
-                            <h4>{{ $item->title }}</h3>
-                            <p>{{ $item->description }}</p>
-                            <h5>Ksh{{ $item->price }}</h5>
+                            <div class="product-desc">
+                                <h4>{{ $item->title }}</h3>
+                                <p>{{ $item->description }}</p>
+                                <h5>Ksh{{ $item->price }}</h5>
+                            </div>
                         </a>
                     </div>  
 
@@ -192,9 +198,11 @@
                     <div class="trending-item">  
                         <a href="details/{{$item['id']}}">             
                             <img src="image/{{ $item->images }}" alt="Photo of the product" class="product-img">
-                            <h4>{{ $item->title }}</h3>
-                            <p>{{ $item->description }}</p>
-                            <h5>Ksh {{ $item->price }}</h5>
+                            <div class="product-desc">
+                                <h4>{{ $item->title }}</h3>
+                                <p>{{ $item->description }}</p>
+                                <h5>Ksh {{ $item->price }}</h5>
+                            </div>
                         </a>
                     </div> 
     
@@ -223,9 +231,11 @@
                     <div class="trending-item">  
                         <a href="details/{{$item['id']}}">             
                             <img src="image/{{ $item->images }}" alt="Photo of the product" class="product-img">
-                            <h4>{{ $item->title }}</h3>
-                            <p>{{ $item->description }}</p>
-                            <h5>Ksh {{ $item->price }}</h5>
+                            <div class="product-desc">
+                                <h4>{{ $item->title }}</h3>
+                                <p>{{ $item->description }}</p>
+                                <h5>Ksh {{ $item->price }}</h5>
+                            </div>
                         </a>
                     </div>               
                 @endforeach
@@ -255,9 +265,11 @@
                     <div class="trending-item">  
                         <a href="details/{{$item['id']}}">             
                             <img src="image/{{ $item->images }}" alt="Photo of the product" class="product-img">
-                            <h4>{{ $item->title }}</h3>
-                            <p>{{ $item->description }}</p>
-                            <h5>Ksh {{ $item->price }}</h5>
+                            <div class="product-desc">
+                                <h4>{{ $item->title }}</h3>
+                                <p>{{ $item->description }}</p>
+                                <h5>Ksh {{ $item->price }}</h5>
+                            </div>
                         </a>
                     </div>  
     

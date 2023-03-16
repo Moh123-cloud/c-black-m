@@ -52,7 +52,6 @@ $total = productController::index();
                 </form>
             </div>
     
-    
             
             <ul class="nav navbar-nav mr-auto navbar-right">
     
@@ -91,12 +90,18 @@ $total = productController::index();
             </ul>
         </div>
     
+{{-- 
         @if (Route::has('login'))
             @auth
     
                 <ul class="nav-products" style="display: flex; margin-top:15px; margin-left: 0px">
+                    
+                    <li class="nav-item active" style="margin-right: 10px;">
+                        <a class="nav-link" href="{{ route('/') }}">Home <span class="sr-only">(current)</span></a>
+                    </li>
+
                     <li class="nav-item" style="margin-right: 10px;">
-                        <a class="nav-link" href="{{ url('item') }}">Your Products({{$total}})</a>
+                        <a class="nav-link" href="{{ url('item') }}">Products({{$total}})</a>
                     </li>
     
                     <li class="nav-item " style="margin-right: 3px;">
@@ -114,7 +119,7 @@ $total = productController::index();
                 </li>
     
             @endauth
-        @endif
+        @endif --}}
     
         <button class="navbar-toggler toggle-button" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="margin: 10px">

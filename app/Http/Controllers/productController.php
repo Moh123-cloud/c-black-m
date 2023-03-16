@@ -52,7 +52,7 @@ class productController extends Controller
             $userId = auth()->user()->id;
             if (\Illuminate\Support\Facades\Auth::user()->usertype == '0') {
                 $product = Product::findOrFail($id);
-                $product->title = $req->title;
+                $product->name = $req->name;
                 $product->category = $req->category;
                 $product->description = $req->description;
                 $product->location = $req->location;

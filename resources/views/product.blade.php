@@ -15,7 +15,7 @@
         </div>
     </div>
 
-    <h1>Your Products</h1>
+    <h1 class="py">Your Products</h1>
 
     @if(count($products)>0)
     <table class="table">
@@ -65,7 +65,7 @@
     </table> 
 
     @else
-        <h3 class="products-none">You have not posted any products! To post <a href="{{ route('sell') }}">Click here</a></h3>
+        <h3 class="products-none my">You have not posted any products! To post <a href="{{ route('sell') }}">Click here</a></h3>
     @endif
 
         

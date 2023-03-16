@@ -3,9 +3,9 @@
 
 @section('content')
 
-<h3>Safety Tips</h3><br><br>
+<h3 class="py">Safety Tips</h3><br><br>
 
-<p>
+<p class="my">
 1. Meet in a public place: When meeting with a seller or buyer, choose a public place that is well-lit and busy eg Ndagani. This can help deter fraud or theft, and ensures that you are in a safe environment.<br><br>
 
 2. Bring a friend: If possible, bring a friend with you when meeting a seller or buyer. Not only does this provide an extra level of safety, but it can also be helpful to have another person to help inspect the product and handle the transaction.<br><br>

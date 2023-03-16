@@ -18,11 +18,11 @@ class sellController extends Controller
     {
         $product = new Product;
 
-        $product->title = $req->title;
+        $product->name = $req->name;
         $product->category = $req->category;
         $product->description = $req->description;
         $product->location = $req->location;
-        $product->user_id = auth()->user()->id;;
+        $product->user_id = auth()->user()->id;
         $product->price = $req->price;
         $product->phone = $req->phone;
 
@@ -30,7 +30,7 @@ class sellController extends Controller
         $image = $req->file;
         $imagename = time() . '.' . $image->getClientOriginalExtension();
         $req->file->move('image', $imagename);
-        $product->images = $imagename;
+        $product->gallery = $imagename;
         $product->save();
 
         return redirect()->back()->with('message', 'Product added Successfully!');

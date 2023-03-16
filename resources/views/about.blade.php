@@ -2,9 +2,9 @@
 
 @section('content')
 
-<h3>About Us</h3><br><br>
+<h3 class="py">About Us</h3><br><br>
 
-<p>
+<p class="my">
 Welcome to our ecommerce website, where buying and selling products has never been easier! Our platform is designed to be user-friendly, convenient, and efficient, allowing you to easily showcase your products to potential customers.<br><br>
 
 Our mission is to provide a platform that connects buyers and sellers from all around Chuka and Chuka University comrades in particular. We believe that everyone has something to offer, and we want to make it easy for individuals and businesses to reach a larger audience.<br><br>
