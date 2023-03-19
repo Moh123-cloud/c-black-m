@@ -36,9 +36,9 @@
             <tr>
                 <th scope="row">{{$loop->iteration}}</th>
                 <td>
-                    <img src="/image/{{ $item->images }}" alt="Product Image" class="update-img">
+                    <img src="/image/{{ $item->gallery }}" alt="Product Image" class="update-img">
                 </td>
-                <td>{{$item->title}}</td>
+                <td>{{$item->name}}</td>
                 <td>{{$item->description}}</td>
                 <td>{{$item->category}}</td>
                 <td>{{$item->location}}</td>

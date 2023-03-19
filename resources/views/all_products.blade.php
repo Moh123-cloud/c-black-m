@@ -76,9 +76,9 @@
                 <div class="trending-item">  
                     <a href="details/{{$item['id']}}">  
                         <div class="product-img-wrapper">
-                            <img src="image/{{ $item->images }}" alt="Photo of the product" class="product-img">                           
+                            <img src="image/{{ $item->gallery }}" alt="Photo of the product" class="product-img">                           
                         </div>           
-                        <h4>{{ $item->title }}</h3>
+                        <h4>{{ $item->name }}</h3>
                         <p>{{ $item->description }}</p>
                         <h5> Ksh {{ $item->price }}</h5>
                     </a>

@@ -64,7 +64,7 @@ class productController extends Controller
                 $image = $req->file;
                 $imagename = time() . '.' . $image->getClientOriginalExtension();
                 $req->file->move('image', $imagename);
-                $product->images = $imagename;
+                $product->gallery = $imagename;
                 $product->save();
 
                 return redirect()->back()->with('success', 'Product Updated Successfully');
@@ -96,10 +96,10 @@ class productController extends Controller
     //Controller to search for product
     public function search(Request $req)
     {
-        $data = Product::where('title', 'like','%'. $req->input('search'). '%')
+        $data = Product::where('name', 'like','%'. $req->input('search'). '%')
         ->orWhere('category', 'like','%' . $req->input('search'). '%')
         ->orWhere('description', 'like','%' . $req->input('search'). '%')
         ->get();
         return view('search', ['products'=>$data]);
     }
-}                                                                                                                                                                                                                                         
+}                                                                                                                                                                                            
