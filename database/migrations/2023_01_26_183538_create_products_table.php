@@ -19,7 +19,7 @@ return new class extends Migration {
             $table->string('description')->nullable();
             $table->string('location')->nullable();
             $table->integer('price')->nullable();
-            $table->integer('phone')->nullable();
+            $table->string('phone')->nullable();
             $table->string('gallery')->nullable();
             $table->timestamps();
         });

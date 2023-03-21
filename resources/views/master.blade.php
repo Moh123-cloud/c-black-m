@@ -60,9 +60,22 @@
     }
 
     .my{
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 20px;
         margin: 0 20px;
     }
 
+    .fs{
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 1.3em;
+        color: yellow;
+    }
+
+    .hfs{
+        font-family: sans-serif;
+        font-size: 50px;
+        color: yellow;
+    }
     
 
     /* Header */
@@ -72,7 +85,15 @@
     }
 
     body{
-        background-color: #E1D9D1;
+        background-color: black;
+        color: white;
+    }
+
+    .btn-br{
+        border: none;
+        margin-top: 15px;
+        background-color: #454545;
+        color: yellow;
     }
 
 
@@ -95,6 +116,12 @@
         border-radius: 10px;
         border: 1px solid #ccc;
         font-size: 16px;
+    }
+
+    .search-btn{
+        background: lightblue;
+        color: white;
+        border-radius: 10px!important;
     }
 
     
@@ -151,6 +178,9 @@
 
     .product-desc{
         padding: 10px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
 
     .trending-item:hover{
@@ -349,14 +379,18 @@
     }
 
     @media screen and (min-width: 1200px) {
+        .products-list{
+            margin-left: 10px;
+        }
         .trending-item{
-            width: 14%;
-            margin: 10px;
+            width: 13vw;
+            margin: 5px;
+            padding: 5px;
         }
 
         .product-img{
             width: 100%;
-            height: 150px;
+            height: 170px;
             border-radius: 3px;
         }
 
@@ -472,7 +506,7 @@
     }
 
     footer ul li{
-        margin-bottom:10px;
+        margin-bottom:30px;
     }
 
     .footer-container {
@@ -483,7 +517,18 @@
         padding: 20px;
         color: #fff;
         margin-top: 100px;
-        margin-bottom: px;
+        margin-bottom: 50px;
+    }
+
+    .fh{
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 25px !important;
+        margin-bottom: 20px;
+    }
+
+    .fd{
+        font-family: sans-serif;
+        font-size: 17px;
     }
 
     
@@ -493,7 +538,7 @@
     .social-links{
         text-align: center;
         padding-bottom: 20px;
-        margin-bottom: 0px;
+        margin-bottom: 80px;
     }
 
 </style>

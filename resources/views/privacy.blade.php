@@ -4,7 +4,7 @@
 
 @section('content')
 
-<h3 class="py">Privacy Policy</h3><br><br>
+<h3 class="py hfs">Privacy Policy</h3><br><br>
 
 <p class="my">
     We take the privacy of our users very seriously and are committed to protecting their personal information. This privacy policy outlines the types of personal information we collect, how we use it, and the steps we take to ensure its security.<br><br>

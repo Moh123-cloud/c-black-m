@@ -15,7 +15,7 @@
         </div>
     </div>
 
-    <h1 class="py">Your Products</h1>
+    <h1 class="py hfs">Your Products</h1>
 
     @if(count($products)>0)
     <table class="table">

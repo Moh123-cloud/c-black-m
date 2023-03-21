@@ -2,7 +2,7 @@
 
 @section('content')
 
-<h3 class="py">About Us</h3><br><br>
+<h3 class="py hfs">About Us</h3><br><br>
 
 <p class="my">
 Welcome to our ecommerce website, where buying and selling products has never been easier! Our platform is designed to be user-friendly, convenient, and efficient, allowing you to easily showcase your products to potential customers.<br><br>

@@ -3,43 +3,43 @@
     <div class="footer-container">
         
         <div class="footer-col">
-            <ul>
-                <li><h4>Support</h4></li>
-                <li><a href="#">support@blackm.co.ke</a></li>
-                <li><a href="#">admin@blackm.co.ke</a></li>
-                <li><a href="{{ route('safety') }}">Safety Tips</a></li>
+            <ul class="fl">
+                <li ><h4 class="fh">Support</h4></li>
+                <li><a href="#" class="fd">support@blackm.co.ke</a></li>
+                <li><a href="#" class="fd">admin@blackm.co.ke</a></li>
+                <li><a href="{{ route('safety') }}" class="fd">Safety Tips</a></li>
             </ul>
         </div>
 
 
         <div class="footer-col">
-            <ul>
-                <li><h4>About Us</h4></li>
-                <li><a href="{{ route('privacy') }}">Privacy Policy</a></li>
-                <li><a href=" {{ route('contact') }}">Contact Us</a></li>
-                <li><a href="{{ route('about') }}">About blackM</a></li>
+            <ul class="fl">
+                <li ><h4 class="fh">About Us</h4></li>
+                <li><a href="{{ route('privacy') }}" class="fd">Privacy Policy</a></li>
+                <li><a href=" {{ route('contact') }}" class="fd">Contact Us</a></li>
+                <li><a href="{{ route('about') }}" class="fd">About blackM</a></li>
                 <li></li>
             </ul>
         </div>
 
         <div class="footer-col">
-            <ul>
-                <li><h4>Links</h4></li>
-                <li><a href="#">Home</a></li>
-                <li><a href=" {{ route('sell') }}">Sell</a></li>
-                <li><a href="#">Your Products</a></li>
+            <ul class="fl">
+                <li><h4 class="fh">Links</h4></li>
+                <li><a href="#" class="fd">Home</a></li>
+                <li><a href=" {{ route('sell') }}" class="fd">Sell</a></li>
+                <li><a href="#" class="fd">Your Products</a></li>
                 <li></li>
             </ul>
         </div>
 
         <div class="footer-col">
-            <ul>
-                <li><h4>Categories</h4></li>
-                <li><a href="{{ route('phone') }}">Phone & Accessories</a></li>
-                <li><a href="{{ route('sport') }}">Sports & Games</a></li>
-                <li><a href="{{ route('electronic') }}">Electronics</a></li>
-                <li><a href="{{ route('furniture') }}">Furniture</a></li>
-                <li><a href="{{ route('fashion') }}">Fashion</a></li>
+            <ul class="fl">
+                <li><h4 class="fh">Categories</h4></li>
+                <li><a href="{{ route('phone') }}" class="fd">Phone & Accessories</a></li>
+                <li><a href="{{ route('sport') }}" class="fd">Sports & Games</a></li>
+                <li><a href="{{ route('electronic') }}" class="fd">Electronics</a></li>
+                <li><a href="{{ route('furniture') }}" class="fd">Furniture</a></li>
+                <li><a href="{{ route('fashion') }}" class="fd">Fashion</a></li>
             </ul>
         </div>
 

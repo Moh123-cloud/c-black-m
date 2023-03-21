@@ -66,8 +66,8 @@
     <div class="trending-wrapper">
 
         <div class="product-header">
-            <a href="{{ route('all') }}">
-                <h2>All Products</h2>
+            <a href="{{ route('all') }}" class="hfs">
+                All Products
             </a>
         </div>
         
@@ -77,7 +77,8 @@
                     <a href="details/{{$item['id']}}">  
                         <div class="product-img-wrapper">
                             <img src="image/{{ $item->gallery }}" alt="Photo of the product" class="product-img">                           
-                        </div>           
+                        </div>      
+                             
                         <h4>{{ $item->name }}</h3>
                         <p>{{ $item->description }}</p>
                         <h5> Ksh {{ $item->price }}</h5>

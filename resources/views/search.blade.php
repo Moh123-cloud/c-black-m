@@ -4,7 +4,7 @@
    
 
     <div class="trending-wrapper">
-        <h1 class="py"rched Items</h1>
+        <h1 class="py hfs">Searched Items</h1>
     
         @foreach ($products as $item)          
             <div class="trending-item">  

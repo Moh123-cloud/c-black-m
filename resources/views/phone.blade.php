@@ -67,8 +67,8 @@
 
             <div class="product-header"> 
               
-                <a href="{{ route('phone') }}">
-                    <h2>Phones  accessories</h2>
+                <a href="{{ route('phone') }}" class="hfs">
+                    Phones  accessories
                 </a>
 
 

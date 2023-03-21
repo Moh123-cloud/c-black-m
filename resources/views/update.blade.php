@@ -14,21 +14,20 @@
         </div>
     </div>
 
-    <h1>Update your products</h1>
-
+     <h1 class="py hfs">Update your products!</h1>
 
     <form action="{{ route('updateproducts', $products->id) }}" class="sellForm form group" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="form-group">
             <label for="formGroupExampleInput">Title*</label>
-            <input type="text" name="title" class="form-control" id="formGroupExampleInput" value="{{ $products->title }}"
+            <input type="text" name="name" class="form-control" id="formGroupExampleInput" value="{{ $products->name }}"
                 required>
         </div>
 
         <div class="form-group">
             <label for="exampleFormControlSelect1">Category</label>
-            <select class="form-control" id="exampleFormControlSelect1" name="category" value="{{ $products->category }}" required>
-                <option>Select</option>
+            <select required class="form-control" id="exampleFormControlSelect1" name="category" value="{{ $products->category }}" required>
+                <option disabled selected>Select Category</option>
                 <option>Phone & Accessories</option>
                 <option>Electronics</option>
                 <option>Fashion</option>
@@ -65,7 +64,7 @@
 
        <div class="form-group">
             <label for="">Upload Photo</label>
-            <input type="file" name="file" value="{{ $products->images }}"  required>
+            <input type="file" name="file" value="{{ $products->gallery }}"  required>
        </div>
 
        <div class="form-group">

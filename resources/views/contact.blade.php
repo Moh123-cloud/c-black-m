@@ -3,7 +3,7 @@
 
 @section('content')
 
-<h3 class="py">Contact Us</h3><br><br>
+<h3 class="py hfs">Contact Us</h3><br><br>
 
 <p class="my">
     Contact Us<br><br>

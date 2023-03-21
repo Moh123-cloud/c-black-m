@@ -15,12 +15,12 @@ $total = productController::index();
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="nav navbar-nav mr-auto navbar-left"> 
                 <li class="nav-item active">
-                    <a class="nav-link" href="{{ route('/') }}">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link fs" href="{{ route('/') }}">Home <span class="sr-only">(current)</span></a>
                 </li>
     
     
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                    <a class="nav-link dropdown-toggle fs" href="#" id="navbarDropdown" role="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Category
                     </a>
@@ -38,9 +38,9 @@ $total = productController::index();
                     
                 </li>  
     
-                <li><a href="{{ route('about') }}">About Us</a></li>
-                <li><a href=" {{ route('contact') }}">Contact Us</a></li>
-                <li  class="privacy" ><a href="{{ route('privacy') }}">Privacy Policy</a></li>
+                <li><a href="{{ route('about') }}" class="fs">About Us</a></li>
+                <li><a href=" {{ route('contact') }}" class="fs">Contact Us</a></li>
+                <li  class="privacy" ><a href="{{ route('privacy') }}" class="fs">Privacy Policy</a></li>
     
             </ul>
     
@@ -48,7 +48,7 @@ $total = productController::index();
                 <form class="form-inline my-2 my-lg-0 navbar-left" action="{{route('search')}}" method="post" >
                     @csrf
                     <input class="form-control mr-sm-2 " type="search" placeholder="Search Title, Category or Description" aria-label="Search" name="search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    <button class="btn btn-outline-success my-2 my-sm-0 search-btn" type="submit">Search</button>
                 </form>
             </div>
     
@@ -59,17 +59,17 @@ $total = productController::index();
                     @auth
     
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url('item') }}">Your Products({{$total}})</a>
+                            <a class="nav-link fs" href="{{ url('item') }}">Your Products({{$total}})</a>
                         </li>
     
                         <li class="nav-item ">
-                            <a class="nav-link" href="{{ route('sell') }}">Sell Here</a>
+                            <a class="nav-link fs" href="{{ route('sell') }}">Sell</a>
                         </li>
     
                         <li class="nav-item">
                             <form action="{{ route('logout') }}" method="POST" style="margin-left: 13px">
                                 @csrf
-                                <button type="submit">Logout</button>
+                                <button type="submit" class="btn-br"><i class="fa fa-sign-out" aria-hidden="true"></i></button>
                             </form>
                         </li>
                     @else

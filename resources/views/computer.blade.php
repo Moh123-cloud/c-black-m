@@ -49,8 +49,8 @@
 
         <div class="trending-wrapper">
             <div class="product-header">
-                <a href="{{ route('computer') }}">
-                    <h2>Computer Accessories</h2>
+                <a href="{{ route('computer') }}" class="hfs">
+                    Computer Accessories
                 </a>
             </div>
 

@@ -47,7 +47,7 @@
         {{-- Sports $Gaming --}}
         <div class="trending-wrapper">
             <div class="product-header">               
-                <a href="{{ route('sport') }}">
+                <a href="{{ route('sport') }}" class="hfs">
                     <h2>Sports and Games</h2>
                 </a>
             </div>

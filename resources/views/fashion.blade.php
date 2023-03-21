@@ -49,8 +49,8 @@
     {{-- Fashion Display --}}
     <div class="trending-wrapper">
         <div class="product-header">
-                <a href="{{ route('fashion') }}">
-                    <h2>Fashion</h2>
+                <a href="{{ route('fashion') }}" class="hfs">
+                   Fashion
                 </a>
         </div>
 

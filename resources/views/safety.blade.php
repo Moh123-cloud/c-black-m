@@ -3,7 +3,7 @@
 
 @section('content')
 
-<h3 class="py">Safety Tips</h3><br><br>
+<h3 class="py hfs">Safety Tips</h3><br><br>
 
 <p class="my">
 1. Meet in a public place: When meeting with a seller or buyer, choose a public place that is well-lit and busy eg Ndagani. This can help deter fraud or theft, and ensures that you are in a safe environment.<br><br>

@@ -10,13 +10,13 @@
                 </div>
 
                 <div class="col-sm-6">
-                    <a href="{{ url('home') }}">Go Back</a>
+                    <a href="{{ url('/') }}">Go Back</a>
                     <h2>{{ $product['name'] }}</h2>
                     <h3>Category: {{ $product['category'] }}</h3>
-                    <h5>Description: {{ $product['description'] }}</h5>
-                    <h5>Price: Ksh {{ $product['price'] }}</h5>
-                    <h5>Location: {{ $product['location'] }}</h5>
-                    <h5>Contact: {{ $product['phone'] }}</h5>
+                    <h4>Description: {{ $product['description'] }}</h4>
+                    <h4>Price: Ksh {{ $product['price'] }}</h4>
+                    <h4>Location: {{ $product['location'] }}</h4>
+                    <h4>Contact: {{ $product['phone'] }}</h4>
                     
                 </div>
             </div>
