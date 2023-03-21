@@ -15,9 +15,11 @@
         </div>
     </div>
 
-    <h1 class="py hfs">Your Products</h1>
+    <h1 class="py hfs">Your Products</h1> 
 
     @if(count($products)>0)
+
+    <h3 style="font-style: italic; margin-top: 20px; margin-bottom: 10px">Kindly delete products after selling to avoid intrest from other users.</h3>
     <table class="table">
         <thead class="thead-dark">
             <tr>
@@ -67,6 +69,8 @@
     @else
         <h3 class="products-none my">You have not posted any products! To post <a href="{{ route('sell') }}">Click here</a></h3>
     @endif
+
+
 
         
     <script type="text/javascript">

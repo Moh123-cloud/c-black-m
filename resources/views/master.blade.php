@@ -180,7 +180,7 @@
         padding: 10px;
         overflow: hidden;
         text-overflow: ellipsis;
-        white-space: nowrap;
+        white-space: nowrap; 
     }
 
     .trending-item:hover{
@@ -478,6 +478,21 @@
         /* width: 400px !important;
         height: 350px !important; */
         border-radius: 4px;
+    }
+
+    .tips{
+        margin-top: 100px;
+        margin-left: px;
+    }
+
+    .tips ol h3{
+        font-weight: 500;
+        font-size: 30px;
+    }
+
+    .tips ol li{
+        font-style: italic;
+        font-size: 20px;
     }
 
 

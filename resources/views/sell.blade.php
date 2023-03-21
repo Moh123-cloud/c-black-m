@@ -23,7 +23,7 @@
         <div class="form-group">
             <label for="formGroupExampleInput">Title*</label>
             <input type="text" name="name" class="form-control" id="formGroupExampleInput" placeholder="eg Phone"
-                required maxlength="20">
+                required maxlength="40">
         </div>
 
         <div class="form-group">

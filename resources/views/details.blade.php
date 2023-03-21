@@ -20,6 +20,21 @@
                     
                 </div>
             </div>
+
+            <div class="tips">
+                <ol>
+                    <h3>Tips</h3>
+                    <li>Meet in public.</li>
+                    <li>If possible, bring a friend.</li>
+                    <li>Inspect the product thoroughly before buying</li>
+                    <li>Only buy once fully satisfied with the product</li>
+                    <li>Use secure payment methods</li>
+                    <li>Trust your instincts!</li>
+                    <li>Be safe!</li>
+
+
+                </ol>
+            </div>
         </div>  
     
 @endsection 
