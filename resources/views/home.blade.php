@@ -69,9 +69,9 @@
                                 <img src="image/{{ $item->gallery }}" alt="Photo of the product" class="product-img">                           
                             </div>  
                             <div class="product-desc">
-                                <h4>{{ $item->name }}</h4>
+                                <h5>{{ $item->name }}</h5>
                                 <p>{{ $item->description }}</p>
-                                <h5> Ksh {{ $item->price }}</h5>            
+                                <h6> Ksh {{ $item->price }}</h6>            
                             </div>         
                         </a>
                     </div>  
@@ -86,7 +86,7 @@
 
             <div class="product-header"> 
                 @if (count($phone) > 0)
-                    <a href="{{ route('phone') }}">
+                    <a href="{{ route('phone') }}" class="hfs">
                         <h2>Phones  accessories</h2>
                         <h5>View more</h5>
                     </a>
@@ -117,7 +117,7 @@
             <div class="product-header">
                 @if (count($electronic) > 0)
                     <div class="all-products-link">
-                        <a href="{{ route('electronic') }}">
+                        <a href="{{ route('electronic') }}" class="hfs">
                             <h2>Electronics</h2> 
                             <h5>View more</h5>
                         </a>
@@ -151,7 +151,7 @@
             <div class="product-header">
                 @if (count($furniture) > 0)
                     <div class="all-products-link">
-                        <a href="{{ route('furniture') }}">
+                        <a href="{{ route('furniture') }}" class="hfs">
                             <h2>Furnitures</h2> 
                             <h5>View more</h5>
                         </a>
@@ -185,7 +185,7 @@
         <div class="trending-wrapper">
             <div class="product-header">
                 @if (count($computer) > 1)
-                    <a href="{{ route('computer') }}">
+                    <a href="{{ route('computer') }}" class="hfs">
                         <h2>Computer Accessories</h2>
                         <h5>View more</h5>
                     </a>
@@ -218,7 +218,7 @@
             <div class="product-header">
                 @if (count($sport) > 0)
                         
-                    <a href="{{ route('sport') }}">
+                    <a href="{{ route('sport') }}" class="hfs">
                         <h2>Sports and Games</h2>
                         <h5>View more</h5>
                     </a>
@@ -250,7 +250,7 @@
             <div class="product-header">
                 @if (count($fashion) > 0)
                 
-                    <a href="{{ route('fashion') }}">
+                    <a href="{{ route('fashion') }}" class="hfs">
                         <h2>Fashion</h2>
                         <h5>View more</h5>
                     </a>

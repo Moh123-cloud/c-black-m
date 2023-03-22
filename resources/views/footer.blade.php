@@ -5,7 +5,7 @@
         <div class="footer-col">
             <ul class="fl">
                 <li ><h4 class="fh">Support</h4></li>
-                <li><a href="#" class="fd">support@blackm.co.ke</a></li>
+                <li><a href="#" class="fd">blackm@gmail.com</a></li>
                 <li><a href="#" class="fd">admin@blackm.co.ke</a></li>
                 <li><a href="{{ route('safety') }}" class="fd">Safety Tips</a></li>
             </ul>
