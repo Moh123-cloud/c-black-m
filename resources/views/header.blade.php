@@ -69,16 +69,22 @@ $total = productController::index();
                         <li class="nav-item">
                             <form action="{{ route('logout') }}" method="POST" style="margin-left: 13px">
                                 @csrf
-                                <button type="submit" class="btn-br"><i class="fa fa-sign-out" aria-hidden="true"></i></button>
+                                <button type="submit" class="btn-br" style="background-color: transparent"><i class="fa fa-sign-out" aria-hidden="true"></i></button>
                             </form>
                         </li>
                     @else
-                        <li class="nav-item">
-                            <a class="btn btn-primary ml-lg-3" href="{{ Route('login') }}"> Login</a>
+                       <li class="nav-item">
+                            <a class="nav-link fs" href="{{ url('item') }}">Your Products</a>
                         </li>
     
                         <li class="nav-item">
-                            <a class="btn btn-primary ml-lg-3" href="{{ Route('register') }}"> Register</a>
+                            <a class="nav-link fs" href="{{ route('sell') }}">Sell</a>
+                        </li>
+    
+                        <li class="nav-item">
+                            <a class="nav-link fs" href="{{ Route('login') }}" style="margin-left: 13px;">
+                                <button type="submit" class="btn-br1" style="background-color: transparent"><i class="fa fa-sign-in" aria-hidden="true"></i></button>
+                            </a>
                         </li>
     
                     @endauth
@@ -121,7 +127,7 @@ $total = productController::index();
             @endauth
         @endif --}}
     
-        <button class="navbar-toggler toggle-button" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        <button class="navbar-toggler toggle-button" style="background-color: transparent; margin-bottom: 13px;" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="margin: 10px">
             <span class="navbar-toggler-icon toggle-btn"><i class="fas fa-bars" aria-hidden="true"></i></span>
         </button>
@@ -136,7 +142,7 @@ $total = productController::index();
     
                 @csrf
                 <input class="search search-box" type="search" placeholder="Search Title, Category or Description" aria-label="Search" name="search" style="width:90%; height: 40px; margin-bottom: 5px">
-                <button class="" type="submit" style="">Search</button>
+                <button class="search-btn" type="submit" style="">Search</button>
             </div>
         </form>
     </div>

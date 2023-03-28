@@ -48,10 +48,10 @@
     </div>
 
     <div class="social-links">
-        <a href="#"><i class="fab fa-facebook" style="margin-right:20px;"></i></a>
-        <a href="#"><i class="fab fa-twitter-square" style="margin-right:20px;"></i></a>
-        <a href="#"><i class="fab fa-instagram" style="margin-right:20px;"></i></a>
-        <a href="#"><i class="fab fa-linkedin" style="margin-right:20px;"></i></a>
+        <a href="#"><i class="fab fa-facebook fa-2x" style="margin-right:20px;"></i></a>
+        <a href="#"><i class="fab fa-twitter-square fa-2x" style="margin-right:20px;"></i></a>
+        <a href="#"><i class="fab fa-instagram fa-2x" style="margin-right:20px;"></i></a>
+        <a href="#"><i class="fab fa-linkedin fa-2x" style="margin-right:20px;"></i></a>
     </div>
 
 </footer>

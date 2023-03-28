@@ -84,8 +84,12 @@ class homeController extends Controller
     //Controller for detail page
     public function details($id)
     {
-        $data = Product::find($id);
-        return view('details', ['product' => $data]);
+        if (Auth::id()) {
+            $data = Product::find($id);
+            return view('details', ['product' => $data]);
+        } else {
+            return redirect('/login');
+        }
     }
 
     //Controller for All Products

@@ -78,10 +78,12 @@
                         <div class="product-img-wrapper">
                             <img src="image/{{ $item->gallery }}" alt="Photo of the product" class="product-img">                           
                         </div>      
-                             
-                        <h4>{{ $item->name }}</h3>
-                        <p>{{ $item->description }}</p>
-                        <h5> Ksh {{ $item->price }}</h5>
+                        
+                        <div class="product-desc">
+                            <h4>{{ $item->name }}</h3>
+                            <p>{{ $item->description }}</p>
+                            <h5> Ksh {{ $item->price }}</h5>
+                        </div>
                     </a>
                 </div>  
             @endforeach

@@ -66,7 +66,7 @@
 
        <div class="form-group">
             <label for="">Upload Photo*</label>
-            <input type="file" name="file" required>
+            <input type="file" name="file" accept="image/png,image/jpeg,image/jpg" required>
        </div>
 
        <div class="form-group">

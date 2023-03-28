@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\product;
+use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class sellController extends Controller
 {
@@ -11,11 +12,17 @@ class sellController extends Controller
 
     public function sellProduct()
     {
-        return view('sell');
+        if (Auth::id()) {
+            return view('sell');
+        } else {
+            return redirect('/login');
+        }
     }
+
 
     public function sell(Request $req)
     {
+        
         $product = new Product;
 
         $product->name = $req->name;

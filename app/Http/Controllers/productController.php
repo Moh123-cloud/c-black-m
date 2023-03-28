@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use App\Models\User;
 use App\Models\Product;
@@ -26,16 +27,21 @@ class productController extends Controller
 
     //Controller to join the users and product tables
     public function productList(){
-        $userId = auth()->user()->id;
-        $products = DB::table('products')
-        ->join('users', 'products.user_id', '=', 'users.id')
-        ->where('products.user_id', $userId)
-        ->select('products.*')
-        ->get();
+
+        if (Auth::id()) {
+            $userId = auth()->user()->id;
+            $products = DB::table('products')
+            ->join('users', 'products.user_id', '=', 'users.id')
+            ->where('products.user_id', $userId)
+            ->select('products.*')
+            ->get();
 
 
 
-        return view('product', ['products'=>$products]);
+            return view('product', ['products'=>$products]);
+        } else {
+            return redirect('/login');
+        }
     }
 
     //Controller to update products view
