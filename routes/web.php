@@ -127,3 +127,7 @@ Route::get('contact', [footerController::class, 'contact'])->name('contact');
 
 
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

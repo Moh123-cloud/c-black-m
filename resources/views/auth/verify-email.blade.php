@@ -1,45 +1,30 @@
-<x-guest-layout>
-    <x-jet-authentication-card>
-        <x-slot name="logo">
-            <x-jet-authentication-card-logo />
-        </x-slot>
-
-        <div class="mb-4 text-sm text-gray-600">
-            {{ __('Before continuing, verify your email address by clicking on the link we just emailed to you.') }}
-        </div>
-
-        @if (session('status') == 'verification-link-sent')
-            <div class="mb-4 font-medium text-sm text-green-600">
-                {{ __('A new verification link has been sent to the email address.') }}
-            </div>
-        @endif
-
-        <div class="mt-4 flex items-center justify-between">
-            <form method="POST" action="{{ route('verification.send') }}">
-                @csrf
-
-                <div>
-                    <x-jet-button type="submit">
-                        {{ __('Resend Verification Email') }}
-                    </x-jet-button>
-                </div>
-            </form>
-
-            <div>
-                <a
-                    href="{{ route('profile.show') }}"
-                    class="underline text-sm text-gray-600 hover:text-gray-900"
-                >
-                    
-
-                <form method="POST" action="{{ route('logout') }}" class="inline">
-                    @csrf
-
-                    <button type="submit" class="underline text-sm text-gray-600 hover:text-gray-900 ml-2">
-                        {{ __('Log Out') }}
-                    </button>
-                </form>
-            </div>
-        </div>
-    </x-jet-authentication-card>
-</x-guest-layout>
+<div style="display:flex; justify-content:center; align-items:center; height:100vh; background-color:#f4f4f4;">
+  <div style="background-color:#fff; padding:2rem; border-radius:0.25rem; width:25rem;">
+    <div style="margin-bottom: 1rem; font-size: 0.875rem; color: #718096;">
+      <h3>Before continuing, verify your email address by clicking on the link we just emailed to you.</h3>
+    </div>
+    @if (session('status') == 'verification-link-sent')
+    <div style="margin-bottom: 1rem; font-weight: 500; font-size: 0.875rem; color: #48bb78;">
+        <h3>A new verification link has been sent to the email address.</h3>
+    </div><br>
+    @endif
+    <div style="margin-top: 1rem; display: flex; align-items: center; justify-content: space-between;">
+      <form method="POST" action="{{ route('verification.send') }}">
+        @csrf
+        <div>
+          <button style="background-color: #4299e1; color: #fff; border: none; border-radius: 0.25rem; padding: 0.5rem 1rem; font-size: 1rem; line-height: 1.5; cursor: pointer;" type="submit">
+              {{ __('Resend Verification Email') }}
+          </button>
+        </div><br>
+      </form>
+      <div>  
+        <form method="POST" action="{{ route('logout') }}" class="inline">
+          @csrf
+          <button style="text-decoration: underline; font-size: 0.875rem; color: #718096; cursor: pointer; border: none; background: none; padding: 0; margin-left: 0.5rem;" type="submit">
+              {{ __('Log Out') }}
+          </button> <br>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
