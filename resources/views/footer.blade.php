@@ -5,8 +5,8 @@
         <div class="footer-col">
             <ul class="fl">
                 <li ><h4 class="fh">Support</h4></li>
-                <li><a href="#" class="fd">blackm@gmail.com</a></li>
                 <li><a href="#" class="fd">admin@blackm.co.ke</a></li>
+                <li><a href="#" class="fd">cblackm167@gmail.com</a></li>
                 <li><a href="{{ route('safety') }}" class="fd">Safety Tips</a></li>
             </ul>
         </div>
@@ -25,9 +25,9 @@
         <div class="footer-col">
             <ul class="fl">
                 <li><h4 class="fh">Links</h4></li>
-                <li><a href="#" class="fd">Home</a></li>
+                <li><a href=" {{ route('/') }}" class="fd">Home</a></li>
                 <li><a href=" {{ route('sell') }}" class="fd">Sell</a></li>
-                <li><a href="#" class="fd">Your Products</a></li>
+                <li><a href=" {{ url('item') }}" class="fd">Your Products</a></li>
                 <li></li>
             </ul>
         </div>
@@ -35,6 +35,7 @@
         <div class="footer-col">
             <ul class="fl">
                 <li><h4 class="fh">Categories</h4></li>
+                <li><a href="{{ route('computer') }}" class="fd">Computer & Accessories</a></li>
                 <li><a href="{{ route('phone') }}" class="fd">Phone & Accessories</a></li>
                 <li><a href="{{ route('sport') }}" class="fd">Sports & Games</a></li>
                 <li><a href="{{ route('electronic') }}" class="fd">Electronics</a></li>

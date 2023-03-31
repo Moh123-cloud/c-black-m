@@ -113,6 +113,7 @@
         text-align: center;
         justify-content: center;
         display: none;
+        color: black
             
     }
 
@@ -124,6 +125,10 @@
         border: 1px solid #ccc;
         font-size: 16px;
         
+    }
+
+    .search{
+        background-color:black;
     }
 
     .search-btn{ 
@@ -544,7 +549,7 @@
     }
 
     a:hover{
-        color: yellow !important;
+        color: white !important;
         background: none;
     }
 

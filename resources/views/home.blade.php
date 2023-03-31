@@ -49,7 +49,7 @@
 
     {{-- All products Display --}}
 
-    <div class="container trending-products">
+
 
         
         <div class="trending-wrapper">
@@ -78,7 +78,7 @@
                 @endforeach
             </div>
 
-        </div>
+       
 
     
         {{-- Phones Display --}}

@@ -2,7 +2,7 @@
 
 @section('content')
 <div style="background-color: #f5f5f5; height: 100vh; display: flex; justify-content: center; align-items: center;">
-    <div class="card" style="width: 60vw; background-color: white; border-radius: 10px; padding: 30px;">
+    <div class="card" style="width: 55vw; background-color: white; border-radius: 10px; padding: 30px;">
         <div class="card-header" style="text-align: center; font-size: 24px; font-weight: bold;">{{ __('Register') }}</div><br>
 
         <div class="card-body">
@@ -66,7 +66,7 @@
                         </button>
                     </div>
 
-                    <br><a href="{{ Route('login') }}"><h4>Already Registered?</h4></a>
+                    <br><a href="{{ Route('login') }}"><h5>Already Registered?</h5></a>
                 </div>
             </form>
         </div>
