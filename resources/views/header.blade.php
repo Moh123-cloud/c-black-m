@@ -47,7 +47,7 @@ $total = productController::index();
             <div class="search-show">
                 <form class="form-inline my-2 my-lg-0 navbar-left" action="{{route('search')}}" method="post" >
                     @csrf
-                    <input class="form-control mr-sm-2 " type="search" placeholder="Search Title, Category or Description" aria-label="Search" name="search">
+                    <input class="form-control mr-sm-2 search search-box" type="search" placeholder="Search Title, Category or Description" aria-label="Search" name="search">
                     <button class="btn btn-outline-success my-2 my-sm-0 search-btn" type="submit">Search</button>
                 </form>
             </div>

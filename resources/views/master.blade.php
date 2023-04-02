@@ -51,6 +51,11 @@
         display: block;
     }
 
+    nav ul li a:hover{
+        color: yellow;
+        background: transparent;
+    }
+
     ul .privacy{
        display: none;     
     }
@@ -165,7 +170,10 @@
     }
 
     .trending-wrapper{
-        display: block;                                                                                        
+        display: block;    
+        margin-left:20px;
+        margin-top: 10px;
+
     }
 
     .products-list{
