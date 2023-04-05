@@ -37,7 +37,16 @@ class homeController extends Controller
                 $fashion = Product::where('category', 'Fashion')
                     ->get();
 
-                return view('home', compact('product', 'phone', 'computer', 'electronic', 'sport', 'furniture', 'fashion'));
+                $home1 = Product::where('category', 'Home & Office')
+                    ->get();
+
+                $health = Product::where('category', 'Health & Beauty')
+                    ->get();
+
+                $other = Product::where('category', 'Others')
+                    ->get();
+
+                return view('home', compact('product', 'phone', 'computer', 'electronic', 'sport', 'furniture', 'fashion', 'home1', 'health', 'other'));
             } else {
                 return view('admin.update');
             }
@@ -72,7 +81,16 @@ class homeController extends Controller
                 $fashion = Product::where('category', 'Fashion')->inRandomOrder()->limit(12)
                     ->get();
 
-                return view('home', compact('product', 'phone', 'computer', 'electronic', 'sport', 'furniture', 'fashion'));
+                $home1 = Product::where('category', 'Home & Office')->inRandomOrder()->limit(12)
+                    ->get();
+
+                $health = Product::where('category', 'Health & Beauty')->inRandomOrder()->limit(12)
+                    ->get();
+
+                $other = Product::where('category', 'Others')->inRandomOrder()->limit(12)
+                    ->get();
+
+                return view('home', compact('product', 'phone', 'computer', 'electronic', 'sport', 'furniture', 'fashion', 'home1', 'health', 'other'));
             } else {
                 return view('admin.update');
             }
@@ -131,6 +149,24 @@ class homeController extends Controller
         $fashion = Product::where('category', 'Fashion')
             ->get();
         return view('fashion', ['product' => $fashion]);
+    }
+
+    public function home1(){
+        $home1 = Product::where('category', 'Home & Office')
+            ->get();
+        return view('home1', ['product' => $home1]);
+    }
+
+    public function health(){
+        $health = Product::where('category', 'Health & Beauty')
+            ->get();
+        return view('health', ['product' => $health]);
+    }
+
+    public function other(){
+        $other = Product::where('category', 'Others')
+            ->get();
+        return view('other', ['product' => $other]);
     }
    
     //Controller for sport

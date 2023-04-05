@@ -34,6 +34,9 @@
                 <option>Furniture</option>
                 <option>Sports & Gaming</option>
                 <option>Computer Accessories</option>
+                <option>Home & Office</option>
+                <option>Health & Beauty</option>
+                <option>Others</option>
             </select>
 
         </div>

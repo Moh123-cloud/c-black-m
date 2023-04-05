@@ -31,6 +31,9 @@ $total = productController::index();
                         <a class="dropdown-item" href="{{ route('furniture') }}">Furniture</a><br>
                         <a class="dropdown-item" href="{{ route('computer') }}">Computer Accessories</a><br>
                         <a class="dropdown-item" href="{{ route('fashion') }}">Fashion</a><br>
+                        <a class="dropdown-item" href="{{ route('home1') }}">Home & Office</a><br>
+                        <a class="dropdown-item" href="{{ route('health') }}">Health & Beauty</a><br>
+                        <a class="dropdown-item" href="{{ route('other') }}">Others</a><br>
                         <a class="dropdown-item" href="{{ route('sport') }}">Sports & Gaming</a><br>
                         
                     </div>

@@ -180,7 +180,7 @@
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-    }
+    } 
 
     .trending-item{
         width: 15%;

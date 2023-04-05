@@ -107,6 +107,15 @@ Route::get('computer', [homeController::class, 'computer'])->name('computer');
 //Route for fashion category blade
 Route::get('fashion', [homeController::class, 'fashion'])->name('fashion');
 
+//Route for home category blade
+Route::get('home1', [homeController::class, 'home1'])->name('home1');
+
+//Route for health category blade
+Route::get('health', [homeController::class, 'health'])->name('health');
+
+//Route for other category blade
+Route::get('other', [homeController::class, 'other'])->name('other');
+
 //Route for sport category blade
 Route::get('sport', [homeController::class, 'sport'])->name('sport');
 
