@@ -6,7 +6,7 @@ $total = productController::index();
 ?>
 
 {{-- Navigation Bar --}}
-<header>
+{{-- <header>
 
     <nav class="navbar navbar-expand-lg navbar-light" style="margin-bottom: 30px !important; padding-top: 15px; padding-bottom: 15px;">
         <a class="navbar-brand" href="#">Black Market</a>
@@ -99,36 +99,7 @@ $total = productController::index();
             </ul>
         </div>
     
-{{-- 
-        @if (Route::has('login'))
-            @auth
-    
-                <ul class="nav-products" style="display: flex; margin-top:15px; margin-left: 0px">
-                    
-                    <li class="nav-item active" style="margin-right: 10px;">
-                        <a class="nav-link" href="{{ route('/') }}">Home <span class="sr-only">(current)</span></a>
-                    </li>
 
-                    <li class="nav-item" style="margin-right: 10px;">
-                        <a class="nav-link" href="{{ url('item') }}">Products({{$total}})</a>
-                    </li>
-    
-                    <li class="nav-item " style="margin-right: 3px;">
-                        <a class="nav-link" href="{{ route('sell') }}">Sell</a>
-                    </li>
-                </ul>
-                
-            @else
-                <li class="nav-item">
-                    <a class="btn btn-primary ml-lg-3" href="{{ Route('login') }}"> Login</a>
-                </li>
-    
-                <li class="nav-item">
-                    <a class="btn btn-primary ml-lg-3" href="{{ Route('register') }}"> Register</a>
-                </li>
-    
-            @endauth
-        @endif --}}
     
         <button class="navbar-toggler toggle-button" style="background-color: transparent; margin-bottom: 13px;" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="margin: 10px">
@@ -149,14 +120,61 @@ $total = productController::index();
             </div>
         </form>
     </div>
-</header>
+</header> --}}
 
-{{-- 
-    <div class="form-container">
-        <form class="form-inline my-2 my-lg-0 navbar-left" action="{{route('search')}}" method="post" >
-            @csrf
-            <input class="form-control mr-sm-2 search search-box" type="search" placeholder="Search Title, Category or Description" aria-label="Search" name="search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-         </form>
-    </div>
- --}}
+
+ <section id="header">
+            <a href="#"><img src="src="{{ url('assets/img/logo.png') }} class="logo" alt=""></a>
+            <div class="searchbox" onclick="onClick(event)">
+                <input type="text" onfocus="onfocus()" onBlur="onBlur()">
+                <button><i class="fa fa-search" aria-hidden="true"></i></button>
+            </div>
+            <div>
+                <ul id="navbar">
+                    <li><a class="active" href="{{ route('/') }}">Home</a></li>
+                    <li>
+                        <a class="nav-link fs" href="{{ url('item') }}">Your Products({{$total}})</a>
+                    </li>
+                    
+                    <li>
+                        <a class="nav-link fs" href="{{ route('sell') }}">Sell</a>
+                    </li>
+                
+                    <li>
+                        <form action="{{ route('logout') }}" method="POST" style="margin-left: 13px">
+                                @csrf
+                                <button type="submit" class="btn-br" style="background-color: transparent"><i class="fa fa-sign-out" aria-hidden="true"></i></button>
+                        </form>
+                    </li>
+                    <img src="img/header/moon1.png" alt="png" id="icon">
+                    <a href="#"><i id="close" class="fa-solid fa-xmark"></i></a>
+                </ul>
+                
+            </div>
+            <div id="mobile">
+                <i id="bar" class="fa-solid fa-bars"></i>
+
+            </div>
+        </section>
+
+<script>
+           // Script for navigation bar
+    const bar = document.getElementById('bar');
+    const close = document.getElementById('close');
+    const nav = document.getElementById('navbar');
+
+    if (bar) {
+        bar.addEventListener('click', () => {
+            nav.classList.add('active');
+        })
+    }
+
+    if (close) {
+        close.addEventListener('click', () => {
+            nav.classList.remove('active');
+        })
+    }
+
+    // js for searchbox
+
+ </script>

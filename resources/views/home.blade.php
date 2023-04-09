@@ -4,7 +4,7 @@
 
 {{-- <div class="row"> --}}
     {{-- Owl Corousel --}}
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+   {{--  <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
         <ol class="carousel-indicators">
             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -44,14 +44,263 @@
             <span class="glyphicon glyphicon-chevron-right"></span>
             <span class="sr-only">Next</span>
         </a>
-    </div>
+    </div> --}}
+
+
+    <section id="hero">
+            <h4>For comrades by comrades</h4>
+            <h2 class="hero-h2">Super value deals</h2>
+            <h1>on all products</h1>
+            <p>Save more with coupons & up to 70% off</p>
+            <button>Shop Now</button>
+    </section>
+
+    <h2>Categories</h2>
+    <section id="feature" class="section-p1">
+            <div class="fe-box">
+                <a href="{{ route('phone') }}">
+                    <img src="img/features/phone.webp" alt="">
+                    <h6>Phones & Accessories</h6>
+                </a>
+            </div>
+            <div class="fe-box">
+                <a href="{{ route('health') }}">                  
+                    <img src="img/features/shoe2.jpg" alt="">
+                    <h6>Health & Beauty</h6>
+                </a>
+            </div>
+            <div class="fe-box">
+                <a href="{{ route('furniture') }}">                   
+                    <img src="img/features/seat.webp" alt="">
+                    <h6>Furniture</h6>
+                </a>
+            </div>
+            <div class="fe-box">
+                <a href="{{ route('electronic') }}">   
+                    <img src="img/features/speaker.webp" alt="">
+                    <h6>Electronics</h6>
+                </a>
+            </div>
+            <div class="fe-box">
+                <a href="{{ route('computer') }}">                  
+                    <img src="img/features/lapi.jpg" alt="">
+                    <h6>Computer Accessories</h6>
+                </a>
+            </div>
+            <div class="fe-box">
+                <a href="{{ route('home1') }}">
+                    <img src="img/features/fashion3.jpg" alt="">
+                    <h6>Home & Office</h6>     
+                </a>
+            </div>
+            <div class="fe-box">
+                <a href="{{ route('fashion') }}">
+                    <img src="img/features/fashion3.jpg" alt="">
+                    <h6>Fashion</h6>     
+                </a>
+            </div>
+    </section>
 
 
     {{-- All products Display --}}
 
+        <section id="product1" class="section-p1">
+            <h2>All Products</h2>
+            <p>Summer Collection New Modern Design</p>
+            <div class="pro-container">
+                 @foreach ($product as $item)          
+                    <div class="pro">  
+                        <a href="details/{{$item['id']}}">  
+                                <img src="image/{{ $item->gallery }}" alt="Photo of the product" class="">                           
+                            
+                            <div class="des">
+                                <h5>{{ $item->name }}</h5>
+                                <span>{{ $item->description }}</span>
+                                <h4> Ksh {{ $item->price }}</h4>            
+                            </div>         
+                        </a>
+                    </div>  
+                @endforeach
+            </div>
+
+        </section>
+        
+        <section id="product1" class="section-p1">
+            <h2>Phones</h2>
+            <p>Summer Collection New Modern Design</p>
+            <div class="pro-container">
+                 @foreach ($phone as $item)          
+                    <div class="pro">  
+                        <a href="details/{{$item['id']}}">  
+                                <img src="image/{{ $item->gallery }}" alt="Photo of the product" class="">                           
+                            
+                            <div class="des">
+                                <h5>{{ $item->name }}</h5>
+                                <span>{{ $item->description }}</span>
+                                <h4> Ksh {{ $item->price }}</h4>            
+                            </div>         
+                        </a>
+                    </div>  
+                @endforeach
+            </div>
+
+        </section>
+        <section id="product1" class="section-p1">
+            <h2>Electronnics</h2>
+            <p>Summer Collection New Modern Design</p>
+            <div class="pro-container">
+                 @foreach ($electronic as $item)          
+                    <div class="pro">  
+                        <a href="details/{{$item['id']}}">  
+                                <img src="image/{{ $item->gallery }}" alt="Photo of the product" class="">                           
+                            
+                            <div class="des">
+                                <h5>{{ $item->name }}</h5>
+                                <span>{{ $item->description }}</span>
+                                <h4> Ksh {{ $item->price }}</h4>            
+                            </div>         
+                        </a>
+                    </div>  
+                @endforeach
+            </div>
+
+        </section>
+        <section id="product1" class="section-p1">
+            <h2>Home</h2>
+            <p>Summer Collection New Modern Design</p>
+            <div class="pro-container">
+                 @foreach ($home1 as $item)          
+                    <div class="pro">  
+                        <a href="details/{{$item['id']}}">  
+                                <img src="image/{{ $item->gallery }}" alt="Photo of the product" class="">                           
+                            
+                            <div class="des">
+                                <h5>{{ $item->name }}</h5>
+                                <span>{{ $item->description }}</span>
+                                <h4> Ksh {{ $item->price }}</h4>            
+                            </div>         
+                        </a>
+                    </div>  
+                @endforeach
+            </div>
+            
+            <section id="banner" class="section-m1">
+                <h4>Repair Services</h4>
+                <h2>Up to <span>70% off</span>-  All T-shirts and Accessories</h2>
+                <button class="normal">Explore More</button>
+            </section>
+
+        </section>
+        <section id="product1" class="section-p1">
+            <h2>Furniture</h2>
+            <p>Summer Collection New Modern Design</p>
+            <div class="pro-container">
+                 @foreach ($furniture as $item)          
+                    <div class="pro">  
+                        <a href="details/{{$item['id']}}">  
+                                <img src="image/{{ $item->gallery }}" alt="Photo of the product" class="">                           
+                            
+                            <div class="des">
+                                <h5>{{ $item->name }}</h5>
+                                <span>{{ $item->description }}</span>
+                                <h4> Ksh {{ $item->price }}</h4>            
+                            </div>         
+                        </a>
+                    </div>  
+                @endforeach
+            </div>
+
+        </section>
+        <section id="product1" class="section-p1">
+            <h2>Computer</h2>
+            <p>Summer Collection New Modern Design</p>
+            <div class="pro-container">
+                 @foreach ($computer as $item)          
+                    <div class="pro">  
+                        <a href="details/{{$item['id']}}">  
+                                <img src="image/{{ $item->gallery }}" alt="Photo of the product" class="">                           
+                            
+                            <div class="des">
+                                <h5>{{ $item->name }}</h5>
+                                <span>{{ $item->description }}</span>
+                                <h4> Ksh {{ $item->price }}</h4>            
+                            </div>         
+                        </a>
+                    </div>  
+                @endforeach
+            </div>
+
+        </section>
+        <section id="product1" class="section-p1">
+            <h2>Fashion</h2>
+            <p>Summer Collection New Modern Design</p>
+            <div class="pro-container">
+                 @foreach ($fashion as $item)          
+                    <div class="pro">  
+                        <a href="details/{{$item['id']}}">  
+                                <img src="image/{{ $item->gallery }}" alt="Photo of the product" class="">                           
+                            
+                            <div class="des">
+                                <h5>{{ $item->name }}</h5>
+                                <span>{{ $item->description }}</span>
+                                <h4> Ksh {{ $item->price }}</h4>            
+                            </div>         
+                        </a>
+                    </div>  
+                @endforeach
+            </div>
+
+        </section>
+        <section id="product1" class="section-p1">
+            <h2>Sports</h2>
+            <p>Summer Collection New Modern Design</p>
+            <div class="pro-container">
+                 @foreach ($sport as $item)          
+                    <div class="pro">  
+                        <a href="details/{{$item['id']}}">  
+                                <img src="image/{{ $item->gallery }}" alt="Photo of the product" class="">                           
+                            
+                            <div class="des">
+                                <h5>{{ $item->name }}</h5>
+                                <span>{{ $item->description }}</span>
+                                <h4> Ksh {{ $item->price }}</h4>            
+                            </div>         
+                        </a>
+                    </div>  
+                @endforeach
+            </div>
+
+        </section>
+        <section id="product1" class="section-p1">
+            <h2>Furniture</h2>
+            <p>Summer Collection New Modern Design</p>
+            <div class="pro-container">
+                 @foreach ($furniture as $item)          
+                    <div class="pro">  
+                        <a href="details/{{$item['id']}}">  
+                                <img src="image/{{ $item->gallery }}" alt="Photo of the product" class="">                           
+                            
+                            <div class="des">
+                                <h5>{{ $item->name }}</h5>
+                                <span>{{ $item->description }}</span>
+                                <h4> Ksh {{ $item->price }}</h4>            
+                            </div>         
+                        </a>
+                    </div>  
+                @endforeach
+            </div>
+
+        </section>
+
 
 
         
+
+
+
+
+
+
         <div class="trending-wrapper">
 
             <div class="product-header">
@@ -77,12 +326,19 @@
                     </div>  
                 @endforeach
             </div>
+        </div>
+
+        <section id="banner" class="section-m1">
+            <h4>Repair Services</h4>
+            <h2>Up to <span>70% off</span>-  All T-shirts and Accessories</h2>
+            <button class="normal">Explore More</button>
+        </section>
 
        
 
     
         {{-- Phones Display --}}
-        <div class="trending-wrapper">
+       {{--  <div class="trending-wrapper">
 
             <div class="product-header"> 
                 @if (count($phone) > 0)
@@ -111,9 +367,9 @@
                 @endforeach
             </div>
         </div>
-    
+     --}}
         {{-- Home Display --}}
-        <div class="trending-wrapper">
+      {{--   <div class="trending-wrapper">
 
             <div class="product-header"> 
                 @if (count($home1) > 0)
@@ -141,10 +397,10 @@
                     
                 @endforeach
             </div>
-        </div>
+        </div> --}}
         
         {{-- Electronics category --}}
-        <div class="trending-wrapper">
+       {{--  <div class="trending-wrapper">
             <div class="product-header">
                 @if (count($electronic) > 0)
                     <div class="all-products-link">
@@ -175,10 +431,25 @@
                     
                 @endforeach
             </div>
-        </div>
+        </div> --}}
+
+        <section id="sm-banner" class="section-p1">
+            <div class="banner-box">
+                <h4>crazy deals</h4>
+                <h2>Buy 1 get 1 Free</h2>
+                <span>The best classic dress is on sale</span>
+                <button class="white">Learn more</button>
+            </div>
+            <div class="banner-box banner-box2">
+                <h4>Spring/summer</h4>
+                <h2>Buy 1 get 1 Free</h2>
+                <span>The best classic dress is on sale</span>
+                <button class="white">Collection</button>
+            </div>
+        </section>
 
         {{-- Furniture Display --}}
-        <div class="trending-wrapper">
+        {{-- <div class="trending-wrapper">
             <div class="product-header">
                 @if (count($furniture) > 0)
                     <div class="all-products-link">
@@ -209,11 +480,11 @@
                     
                 @endforeach
             </div>
-        </div>
+        </div> --}}
     
     
         {{-- Computer Accessories Display --}}
-        <div class="trending-wrapper">
+      {{--   <div class="trending-wrapper">
             <div class="product-header">
                 @if (count($computer) > 0)
                     <a href="{{ route('computer') }}" class="hfs">
@@ -239,10 +510,10 @@
     
                 @endforeach
             </div>
-        </div><br><br>
+        </div><br><br> --}}
 
         {{-- Health & Beauty Display --}}
-        <div class="trending-wrapper">
+        {{-- <div class="trending-wrapper">
             <div class="product-header">
                 @if (count($health) > 0)
                     <a href="{{ route('health') }}" class="hfs">
@@ -268,13 +539,13 @@
     
                 @endforeach
             </div>
-        </div><br><br>
+        </div><br><br> --}}
 
     
     
         {{-- Sports $Gaming --}}
         
-        <div class="trending-wrapper">
+       {{--  <div class="trending-wrapper">
             <div class="product-header">
                 @if (count($sport) > 0)
                         
@@ -300,13 +571,13 @@
                     </div>               
                 @endforeach
             </div>
-        </div><br><br>
+        </div><br><br> --}}
     
     
     
         {{-- Fashion Display --}}
         
-        <div class="trending-wrapper">
+   {{--      <div class="trending-wrapper">
             <div class="product-header">
                 @if (count($fashion) > 0)
                 
@@ -337,12 +608,12 @@
 
             </div>
         </div>
-    </div>
+    </div> --}}
 
 
         {{-- Others Display --}}
         
-        <div class="trending-wrapper">
+        {{-- <div class="trending-wrapper">
             <div class="product-header">
                 @if (count($other) > 0)
                 
@@ -372,7 +643,7 @@
                 @endforeach
 
             </div>
-        </div>
+        </div> --}}
     </div>
 
 {{-- </div> --}}

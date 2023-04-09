@@ -5,8 +5,11 @@
         <div class="container detail-container">
             <div class="row">
                 <div class="col-sm-6">
-                    <img src="/image/{{ $product['gallery'] }}" alt="Product Image" class="detail-img">
+                    <div class="details-img-wrapper">
 
+                        <img src="/image/{{ $product['gallery'] }}" alt="Product Image" class="detail-img"  style="height: 70vh !important">
+                    </div>
+ 
                 </div>
 
                 <div class="col-sm-6">
