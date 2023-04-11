@@ -2,7 +2,7 @@
 
 @section('content')
     {{-- Owl Corousel --}}
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    {{-- <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
         <ol class="carousel-indicators">
             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -42,54 +42,37 @@
             <span class="glyphicon glyphicon-chevron-right"></span>
             <span class="sr-only">Next</span>
         </a>
-    </div>
+    </div> --}}
 
         
-        {{-- Electronics category --}}
-     {{--    <div class="trending-wrapper">
+         <section id="hero">
+            <h4>For comrades by comrades</h4>
+            <h2 class="hero-h2">Super value deals</h2>
+            <h1>on all products</h1>
+            <p>Save more with coupons & up to 70% off</p>
+            <button>Shop Now</button>
+        </section>
+ 
+
+        <section id="product1" class="section-p1">
             <h2>Electronics</h2>
-            @foreach ($product as $item)          
-                <div class="trending-item">  
-                    <a href="details/{{$item['id']}}">             
-                        <img src="image/{{ $item->images }}" alt="Photo of the product" class="product-img">
-                        <h4>{{ $item->title }}</h3>
-                        <p>{{ $item->description }}</p>
-                        <h5>Ksh {{ $item->price }}</h5>
-                    </a>
-                </div>  
-            @endforeach
-        </div><br><br> --}}
-
-           <div class="trending-wrapper">
-            <div class="product-header">
-                <div class="all-products-link">
-                    <a href="{{ route('electronic') }}" class="hfs">
-                        Electronics 
-                    </a>
-                </div>
-            </div>
-
-            <div class="products-list">
-                @foreach ($product as $item) 
-                    
-                    <div class="trending-item">  
-                        <a href="details/{{$item['id']}}">             
-                            <img src="image/{{ $item->gallery }}" alt="Photo of the product" class="product-img">
-                            <div class="product-desc">
-                                <h4>{{ $item->name }}</h3>
-                                <p>{{ $item->description }}</p>
-                                <h5>Ksh {{ $item->price }}</h5>
-                            </div>
+            <div class="pro-container">
+                 @foreach ($product as $item)          
+                    <div class="pro">  
+                        <a href="details/{{$item['id']}}">  
+                                <img src="image/{{ $item->gallery }}" alt="Photo of the product" class="">                           
+                            
+                            <div class="des">
+                                <h5>{{ $item->name }}</h5>
+                                <span>{{ $item->description }}</span>
+                                <h4> Ksh {{ $item->price }}</h4>            
+                            </div>         
                         </a>
                     </div>  
-
-                    
                 @endforeach
             </div>
-        </div>
 
-        
-    </div>
+        </section>
 
 
         

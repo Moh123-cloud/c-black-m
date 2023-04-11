@@ -124,33 +124,35 @@ $total = productController::index();
 
 
  <section id="header">
-            <a href="#"><img src="src="{{ url('assets/img/logo.png') }} class="logo" alt=""></a>
+            <a href="#"><img src="img/black.png" class="logo" alt=""></a>
+
+        <form class="" action="{{route('search')}}" method="post">
+            @csrf
             <div class="searchbox" onclick="onClick(event)">
-                <input type="text" onfocus="onfocus()" onBlur="onBlur()">
-                <button><i class="fa fa-search" aria-hidden="true"></i></button>
+                <!-- added placeholder text -->
+                <input type="text" onfocus="onfocus()" onBlur="onBlur()" placeholder="Search product..">
+                <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
             </div>
-            <div>
+        </form>
+         
                 <ul id="navbar">
                     <li><a class="active" href="{{ route('/') }}">Home</a></li>
-                    <li>
-                        <a class="nav-link fs" href="{{ url('item') }}">Your Products({{$total}})</a>
-                    </li>
-                    
-                    <li>
-                        <a class="nav-link fs" href="{{ route('sell') }}">Sell</a>
-                    </li>
-                
+                    <li><a href="shop.html">Shop</a></li>
+                    <!-- <li><a href="about.html">About</a></li> -->
+                    <!-- <li><a href="#">Contact</a></li> -->
+                    <li><a href="{{ route('sell') }}">Sell</a></li>
+                    <li><a href="{{ url('item') }}">Your products</a></li>
                     <li>
                         <form action="{{ route('logout') }}" method="POST" style="margin-left: 13px">
                                 @csrf
-                                <button type="submit" class="btn-br" style="background-color: transparent"><i class="fa fa-sign-out" aria-hidden="true"></i></button>
-                        </form>
+                                <button type="submit" class="btn-br" style="background-color: transparent">Logout</button>
+                            </form>
                     </li>
                     <img src="img/header/moon1.png" alt="png" id="icon">
                     <a href="#"><i id="close" class="fa-solid fa-xmark"></i></a>
                 </ul>
                 
-            </div>
+          
             <div id="mobile">
                 <i id="bar" class="fa-solid fa-bars"></i>
 

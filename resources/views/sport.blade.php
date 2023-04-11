@@ -44,8 +44,29 @@
         </a>
     </div>
     
+
+        <section id="product1" class="section-p1">
+            <h2>Sports & Games</h2>
+            <div class="pro-container">
+                 @foreach ($product as $item)          
+                    <div class="pro">  
+                        <a href="details/{{$item['id']}}">  
+                                <img src="image/{{ $item->gallery }}" alt="Photo of the product" class="">                           
+                            
+                            <div class="des">
+                                <h5>{{ $item->name }}</h5>
+                                <span>{{ $item->description }}</span>
+                                <h4> Ksh {{ $item->price }}</h4>            
+                            </div>         
+                        </a>
+                    </div>  
+                @endforeach
+            </div>
+
+        </section>
+
         {{-- Sports $Gaming --}}
-        <div class="trending-wrapper">
+      {{--   <div class="trending-wrapper">
             <div class="product-header">               
                 <a href="{{ route('sport') }}" class="hfs">
                     <h2>Sports and Games</h2>
@@ -66,7 +87,7 @@
                     </div>               
                 @endforeach
             </div>
-        </div><br><br>
+        </div><br><br> --}}
     
 
     </div>

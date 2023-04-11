@@ -55,18 +55,14 @@
             <button>Shop Now</button>
     </section>
 
-    <h2>Categories</h2>
+    <section id="product1" class="section-p1">
+            <h2>Categories</h2>
+    </section>
     <section id="feature" class="section-p1">
             <div class="fe-box">
                 <a href="{{ route('phone') }}">
                     <img src="img/features/phone.webp" alt="">
                     <h6>Phones & Accessories</h6>
-                </a>
-            </div>
-            <div class="fe-box">
-                <a href="{{ route('health') }}">                  
-                    <img src="img/features/shoe2.jpg" alt="">
-                    <h6>Health & Beauty</h6>
                 </a>
             </div>
             <div class="fe-box">
@@ -106,12 +102,12 @@
 
         <section id="product1" class="section-p1">
             <h2>All Products</h2>
-            <p>Summer Collection New Modern Design</p>
+            <p><a href="{{ route('all') }}">See All</a></p>
             <div class="pro-container">
                  @foreach ($product as $item)          
                     <div class="pro">  
                         <a href="details/{{$item['id']}}">  
-                                <img src="image/{{ $item->gallery }}" alt="Photo of the product" class="">                           
+                            <img src="image/{{ $item->gallery }}" alt="Photo of the product" class="">                     
                             
                             <div class="des">
                                 <h5>{{ $item->name }}</h5>
@@ -127,7 +123,7 @@
         
         <section id="product1" class="section-p1">
             <h2>Phones</h2>
-            <p>Summer Collection New Modern Design</p>
+            <p><a href="{{ route('phone') }}">See All</a></p>
             <div class="pro-container">
                  @foreach ($phone as $item)          
                     <div class="pro">  
@@ -145,9 +141,10 @@
             </div>
 
         </section>
+
         <section id="product1" class="section-p1">
             <h2>Electronnics</h2>
-            <p>Summer Collection New Modern Design</p>
+            <p><a href="{{ route('electronic') }}">See All</a></p>
             <div class="pro-container">
                  @foreach ($electronic as $item)          
                     <div class="pro">  
@@ -167,7 +164,7 @@
         </section>
         <section id="product1" class="section-p1">
             <h2>Home</h2>
-            <p>Summer Collection New Modern Design</p>
+            <p><a href="{{ route('home1') }}">See All</a></p>
             <div class="pro-container">
                  @foreach ($home1 as $item)          
                     <div class="pro">  
@@ -193,7 +190,7 @@
         </section>
         <section id="product1" class="section-p1">
             <h2>Furniture</h2>
-            <p>Summer Collection New Modern Design</p>
+            <p><a href="{{ route('furniture') }}">See All</a></p>
             <div class="pro-container">
                  @foreach ($furniture as $item)          
                     <div class="pro">  
@@ -213,7 +210,7 @@
         </section>
         <section id="product1" class="section-p1">
             <h2>Computer</h2>
-            <p>Summer Collection New Modern Design</p>
+            <p><a href="{{ route('computer') }}">See All</a></p>
             <div class="pro-container">
                  @foreach ($computer as $item)          
                     <div class="pro">  
@@ -233,7 +230,7 @@
         </section>
         <section id="product1" class="section-p1">
             <h2>Fashion</h2>
-            <p>Summer Collection New Modern Design</p>
+            <p><a href="{{ route('fashion') }}">See All</a></p>
             <div class="pro-container">
                  @foreach ($fashion as $item)          
                     <div class="pro">  
@@ -253,7 +250,7 @@
         </section>
         <section id="product1" class="section-p1">
             <h2>Sports</h2>
-            <p>Summer Collection New Modern Design</p>
+            <p><a href="{{ route('sport') }}">See All</a></p>
             <div class="pro-container">
                  @foreach ($sport as $item)          
                     <div class="pro">  
@@ -271,26 +268,7 @@
             </div>
 
         </section>
-        <section id="product1" class="section-p1">
-            <h2>Furniture</h2>
-            <p>Summer Collection New Modern Design</p>
-            <div class="pro-container">
-                 @foreach ($furniture as $item)          
-                    <div class="pro">  
-                        <a href="details/{{$item['id']}}">  
-                                <img src="image/{{ $item->gallery }}" alt="Photo of the product" class="">                           
-                            
-                            <div class="des">
-                                <h5>{{ $item->name }}</h5>
-                                <span>{{ $item->description }}</span>
-                                <h4> Ksh {{ $item->price }}</h4>            
-                            </div>         
-                        </a>
-                    </div>  
-                @endforeach
-            </div>
-
-        </section>
+ 
 
 
 
@@ -301,7 +279,7 @@
 
 
 
-        <div class="trending-wrapper">
+        {{-- <div class="trending-wrapper">
 
             <div class="product-header">
                 <a href="{{ route('all') }}" class="hfs">
@@ -326,7 +304,7 @@
                     </div>  
                 @endforeach
             </div>
-        </div>
+        </div> --}}
 
         <section id="banner" class="section-m1">
             <h4>Repair Services</h4>

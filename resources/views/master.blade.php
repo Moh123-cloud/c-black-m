@@ -73,6 +73,14 @@ h4 {
   color: #222;
 }
 
+/* ===============added h5 for products page================== */
+h5 {
+  font-size: 16px;
+  line-height: 40px;
+}
+
+/* =============================================== */
+
 h6 {
   font-weight: 700;
   font-size: 12px;
@@ -96,6 +104,13 @@ body {
   width: 100%;
 }
 
+/* =======================after adding blackM logo i adjusted the width========================== */
+.logo {
+  width: 94px;
+}
+
+/* ======================================================== */
+
 #icon {
   width: 24px;
   cursor: pointer;
@@ -104,40 +119,27 @@ body {
 /* -------------searchbox------------------ */
 
 
+/* ===================modified search bar======================== */
+
+
+/* ==============added margin left for blackM logo======================= */
 .searchbox {
   position: relative;
   height: 40px;
-  width: 450px;
+  width: 400px;
   margin: 10px auto;
   overflow: hidden;
-  border-bottom: 2px solid #465b52;
   background: none;
   color: #465b52;
   perspective: 1800px;
   perspective-origin: 40% 40%;
   transform-style: preserve-3d;
-  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  border-radius: 10px;
+  background-color: #fff;
+  /* margin-left: 10px; */
+
 }
-/* .searchbox--active {
-  color: #000;
-} */
-.searchbox:after {
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 100%;
-  top: 20px;
-  left: 0px;
-  transform: rotateX(90deg);
-  background: #fff;
-  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-  box-sizing: inherit;
-}
-/* .searchbox--active:after {
-  top: 0px;
-  left: 0px;
-  transform: rotateX(0deg);
-} */
+
 .searchbox input {
   position: absolute;
   z-index: 1;
@@ -149,6 +151,7 @@ body {
   font-size: 1em;
   color: inherit;
   background: none;
+  outline: none;
 }
 .searchbox button {
   position: absolute;
@@ -163,6 +166,8 @@ body {
   color: inherit;
   cursor: pointer;
 }
+
+/* ========================================================= */
 
 
 /* -------------------------------- */
@@ -624,9 +629,61 @@ footer .copyright {
 }
 
 footer .pay {
-  width: 194px;
+  width: 80px;
   margin-top: -10px;
 }
+
+
+/* ==================products page still under construction================= */
+
+
+#prodetails .single-pro-image {
+  width: 40%;
+  margin-right: 50px;
+}
+
+#prodetails{
+  display: flex;
+  margin-top: 20px;
+}
+
+.small-img-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+.small-img-col {
+  flex-basis: 24%;
+  cursor: pointer;
+}
+
+#prodetails .single-pro-details {
+  width: 50%;
+  padding-top: 30px;
+}
+
+#prodetails .single-pro-details h4 {
+  padding: 40px 0 20px 0;
+}
+
+#prodetails .single-pro-details h2 {
+  font-size: 26px;
+}
+
+#prodetails .single-pro-details span {
+  line-height: 25px;
+}
+
+
+/* =======================end of products page========================== */
+
+
+
+
+/* ========================================================== */
+/* ========================================================== */
+/* ===================MEDIA QUERIES======================== */
+
 
 @media (max-width:799px) {
   .section-p1 {
@@ -666,12 +723,13 @@ footer .pay {
     color: #1a1a1a;
     font-size: 27px;
     padding-left: 70px;
-
   }
+
+  /* =================changed icon position ====================== */
   #icon {
     position: absolute;
     left: 30px;
-    top: 250px;
+    top: 290px;
     width: 30px;
   }
 
@@ -703,7 +761,8 @@ footer .pay {
   }
 
   #product1 .pro {
-    margin: 15px;
+    width: 150px;
+    margin: 10px;
   }
 
   #banner {
@@ -721,6 +780,186 @@ footer .pay {
     width: 70%;
   }
 }
+
+
+/* =================added these for all screen sizes============================ */
+
+@media (max-width: 576px) {
+  #header {
+    padding: 5px 20px;
+  }
+
+  #hero {
+    padding: 0 20px;
+    background-position: 60%;
+  }
+
+
+  #feature .fe-box {
+    width: 150px;
+    margin: 5px;
+  }
+
+  #feature {
+    justify-content: space-between;
+  }
+
+  #product1 .pro {
+    margin: 5px;
+    width: 230px;
+  }
+}
+
+@media screen and (min-width: 577px) and (max-width: 767px) {
+  #header {
+    padding: 5px 20px;
+  }
+
+  #hero {
+    padding: 0 20px;
+    background-position: 60%;
+  }
+
+
+  #feature .fe-box {
+    width: 150px;
+    margin: 5px;
+  }
+
+
+  #product1 .pro {
+    width: 220px;
+    margin: 5px;
+  }
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 991px){
+  #feature .fe-box{
+    width: 190px;
+    margin: 5px;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  #feature .fe-box {
+    width: 130px;
+  }
+
+  #hero {
+    background-position: 50%;
+  }
+}
+
+
+@media screen and (min-width: 1200px) {
+  #feature .fe-box {
+    width: 160px;
+  }
+}
+
+
+
+
+/* =====================end============================== */
+
+
+@media (max-width: 912px) {
+  #mobile {
+    display: flex;
+    align-items: center;
+  }
+
+  #mobile i {
+    color: #1a1a1a;
+    font-size: 27px;
+    padding-left: 70px;
+  }
+
+  .section-p1 {
+    padding: 40px 40px;
+  }
+
+  #navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    height: 100vh;
+    width: 300px;
+    background-color: #E3E6F3;
+    box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+    padding: 80px 0 0 10px;
+    transition: 0.3s;
+  }
+
+  #navbar li {
+    margin-bottom: 25px;
+  }
+
+  #navbar.active {
+    right: 0;
+  }
+
+  #icon {
+    position: absolute;
+    left: 30px;
+    top: 290px;
+    width: 30px;
+  }
+
+  #close {
+    display: initial;
+    position: absolute;
+    top: 25px;
+    left: 30px;
+    color: #222;
+    font-size: 24px;
+  }
+
+  #hero {
+    height: 70vh;
+    background-position: top 30% right 30%;
+    padding: 0 80px;
+  }
+
+  #feature {
+    justify-content: center;
+  }
+
+  #feature .fe-box {
+    margin: 15px 15px;
+  }
+
+  #product1 .pro-container {
+    justify-content: center;
+  }
+
+  #product1 .pro {
+    width: 150px;
+    margin: 10px;
+  }
+
+  #banner {
+    height: 30vh;
+  }
+
+  #sm-banner .banner-box {
+    min-width: 100%;
+    height: 30vh;
+  }
+
+  
+
+  #newsletter .form {
+    width: 70%;
+  }
+}
+
+
 
 @media (max-width: 477px) {
   .section-p1 {
@@ -766,7 +1005,7 @@ footer .pay {
   }
 
   #feature .fe-box {
-    width: 110px;
+    width: 140px;
     margin: 0 0 15px 0;
   }
 
@@ -775,8 +1014,8 @@ footer .pay {
   }
 
   #product1 .pro {
-    width: 130px;
-    margin: 15px;
+    width: 200px;
+    margin: 5px;
     max-width: 300px;
 
   }
@@ -809,6 +1048,81 @@ footer .pay {
 
 }
 
+/* Iphone XR */
+@media (max-width: 414px) {
+  #feature .fe-box {
+    width: 120px;
+    margin: 5px auto;;
+  }
+
+  #product1 .pro {
+    margin: 5px;
+    width: 170px;
+  }
+
+}
+
+@media (max-width: 412px) {
+  #feature .fe-box {
+    width: 120px;
+    margin: 5px auto;;
+  }
+
+  #product1 .pro {
+    margin: 5px;
+    width: 170px;
+  }
+
+}
+
+/* Pixel 5 */
+@media (max-width: 393px) {
+  #feature .fe-box {
+    width: 100px;
+    margin: 5px auto;;
+  }
+
+  #product1 .pro {
+    margin: 5px;
+    width: 160px;
+
+  }
+
+}
+
+
+/* Iphone 12 Pro */
+@media (max-width: 390px) {
+  #feature .fe-box {
+    width: 100px;
+    margin: 5px auto;;
+  }
+
+  #product1 .pro {
+    margin: 5px;
+    width: 160px;
+
+  }
+
+}
+
+
+/* Iphone SE */
+@media (max-width: 375px) {
+  #feature .fe-box {
+    width: 100px;
+    margin: 5px auto;;
+  }
+
+  #product1 .pro {
+    margin: 5px;
+    width: 150px;
+
+  }
+
+}
+
+
 
 @media (max-width: 320px) {
   #header {
@@ -822,8 +1136,8 @@ footer .pay {
 
 
   #feature .fe-box {
-    width: 110px;
-    margin: 15px;
+    width: 130px;
+    margin: 5px;
   }
 
   #feature {
@@ -832,10 +1146,38 @@ footer .pay {
 
   #product1 .pro {
     margin: 5px;
+    width: 130px;
 
   }
 
 }
+
+
+/* Galaxy fold */
+@media (max-width: 280px) {
+  #feature .fe-box {
+    width: 100px;
+    margin: 5px auto;;
+  }
+
+  #product1 .pro {
+    margin: 5px;
+    width: 100px;
+
+  }
+
+
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -902,7 +1244,7 @@ footer .pay {
 
     .btn-br{
         border: none;
-        margin-top: 15px;
+        
         background-color: #454545;
         color: yellow;
     }
@@ -1279,8 +1621,9 @@ footer .pay {
             margin-left: 10px;
         }
         .trending-item{
-            width: 13vw;
-            margin: 5px;
+          justify-content: space-between
+            width: calc(25%-20px);
+          
             padding: 5px;
         }
 

@@ -60,7 +60,28 @@
     </div><br><br>
     <br><br> --}}
 
-    <div class="trending-wrapper">
+    
+        <section id="product1" class="section-p1">
+            <h2>Others</h2>
+            <div class="pro-container">
+                 @foreach ($product as $item)          
+                    <div class="pro">  
+                        <a href="details/{{$item['id']}}">  
+                                <img src="image/{{ $item->gallery }}" alt="Photo of the product" class="">                           
+                            
+                            <div class="des">
+                                <h5>{{ $item->name }}</h5>
+                                <span>{{ $item->description }}</span>
+                                <h4> Ksh {{ $item->price }}</h4>            
+                            </div>         
+                        </a>
+                    </div>  
+                @endforeach
+            </div>
+
+        </section>
+
+   {{--  <div class="trending-wrapper">
         <div class="product-header">
             <div class="all-products-link">
                 <a href="{{ route('other') }}" class="hfs">
@@ -86,7 +107,7 @@
                 
             @endforeach
         </div>
-    </div>
+    </div> --}}
 
 
 

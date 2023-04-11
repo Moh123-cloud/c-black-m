@@ -60,6 +60,28 @@
     </div><br><br>
     <br><br> --}}
 
+    
+        <section id="product1" class="section-p1">
+            <h2>Home & Office</h2>
+            <div class="pro-container">
+                 @foreach ($home1 as $item)          
+                    <div class="pro">  
+                        <a href="details/{{$item['id']}}">  
+                                <img src="image/{{ $item->gallery }}" alt="Photo of the product" class="">                           
+                            
+                            <div class="des">
+                                <h5>{{ $item->name }}</h5>
+                                <span>{{ $item->description }}</span>
+                                <h4> Ksh {{ $item->price }}</h4>            
+                            </div>         
+                        </a>
+                    </div>  
+                @endforeach
+            </div>
+
+        </section>
+
+{{-- 
     <div class="trending-wrapper">
         <div class="product-header">
             <div class="all-products-link">
@@ -86,7 +108,7 @@
                 
             @endforeach
         </div>
-    </div>
+    </div> --}}
 
 
 

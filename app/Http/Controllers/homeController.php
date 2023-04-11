@@ -61,33 +61,33 @@ class homeController extends Controller
     {
         if (Auth::id()) {
             if (Auth::user()->usertype == '0') {
-                $product = Product::inRandomOrder()->limit(36)->get();
+                $product = Product::inRandomOrder()->limit(8)->get();
 
-                $phone = Product::where('category', 'Phone & Accessories')->inRandomOrder()->limit(12)
+                $phone = Product::where('category', 'Phone & Accessories')->inRandomOrder()->limit(4)
                     ->get();
 
-                $computer = Product::where('category', 'Computer Accessories')->inRandomOrder()->limit(12)
+                $computer = Product::where('category', 'Computer Accessories')->inRandomOrder()->limit(4)
                     ->get();
 
-                $electronic = Product::where('category', 'Electronics')->inRandomOrder()->limit(12)
+                $electronic = Product::where('category', 'Electronics')->inRandomOrder()->limit(4)
                     ->get();
 
-                $sport = Product::where('category', 'Sports & Gaming')->inRandomOrder()->limit(12)
+                $sport = Product::where('category', 'Sports & Gaming')->inRandomOrder()->limit(4)
                     ->get();
 
-                $furniture = Product::where('category', 'Furniture')->inRandomOrder()->limit(12)
+                $furniture = Product::where('category', 'Furniture')->inRandomOrder()->limit(4)
                     ->get();
 
-                $fashion = Product::where('category', 'Fashion')->inRandomOrder()->limit(12)
+                $fashion = Product::where('category', 'Fashion')->inRandomOrder()->limit(4)
                     ->get();
 
-                $home1 = Product::where('category', 'Home & Office')->inRandomOrder()->limit(12)
+                $home1 = Product::where('category', 'Home & Office')->inRandomOrder()->limit(4)
                     ->get();
 
-                $health = Product::where('category', 'Health & Beauty')->inRandomOrder()->limit(12)
+                $health = Product::where('category', 'Health & Beauty')->inRandomOrder()->limit(4)
                     ->get();
 
-                $other = Product::where('category', 'Others')->inRandomOrder()->limit(12)
+                $other = Product::where('category', 'Others')->inRandomOrder()->limit(4)
                     ->get();
 
                 return view('home', compact('product', 'phone', 'computer', 'electronic', 'sport', 'furniture', 'fashion', 'home1', 'health', 'other'));

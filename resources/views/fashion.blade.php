@@ -2,7 +2,7 @@
 
 @section('content')
     {{-- Owl Corousel --}}
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+   {{--  <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
         <ol class="carousel-indicators">
             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -42,12 +42,41 @@
             <span class="glyphicon glyphicon-chevron-right"></span>
             <span class="sr-only">Next</span>
         </a>
-    </div>
+    </div> --}}
+
+
+        <section id="hero">
+            <h4>For comrades by comrades</h4>
+            <h2 class="hero-h2">Super value deals</h2>
+            <h1>on all products</h1>
+            <p>Save more with coupons & up to 70% off</p>
+            <button>Shop Now</button>
+        </section>
+
+        <section id="product1" class="section-p1">
+            <h2>Fashion</h2>
+            <div class="pro-container">
+                 @foreach ($product as $item)          
+                    <div class="pro">  
+                        <a href="details/{{$item['id']}}">  
+                                <img src="image/{{ $item->gallery }}" alt="Photo of the product" class="">                           
+                            
+                            <div class="des">
+                                <h5>{{ $item->name }}</h5>
+                                <span>{{ $item->description }}</span>
+                                <h4> Ksh {{ $item->price }}</h4>            
+                            </div>         
+                        </a>
+                    </div>  
+                @endforeach
+            </div>
+
+        </section>
 
     
     
     {{-- Fashion Display --}}
-    <div class="trending-wrapper">
+   {{--  <div class="trending-wrapper">
         <div class="product-header">
                 <a href="{{ route('fashion') }}" class="hfs">
                    Fashion
@@ -72,7 +101,7 @@
             @endforeach
 
         </div>
-    </div>
+    </div> --}}
 
 
         
