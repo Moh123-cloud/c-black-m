@@ -3,26 +3,33 @@
 @section('content')
    
 
-    <div class="trending-wrapper">
-        <h1 class="py hfs" style="margin-bottom: 50px;">Searched Items</h1>
+<section id="hero">
+            <h4>For comrades by comrades</h4>
+            <h2 class="hero-h2">Super value deals</h2>
+            <h1>on all products</h1>
+            <p>Save more with coupons & up to 70% off</p>
+            <button>Shop Now</button>
+        </section>
     
-        <div class="products-list">
-
-                @foreach ($products as $item)              
-                    <div class="trending-item">  
-                        <a href="details/{{$item['id']}}">             
-                            <img src="image/{{ $item->gallery }}" alt="Photo of the product" class="product-img">
-                            <div class="product-desc">
-                                <h4>{{ $item->name }}</h3>
-                                <p>{{ $item->description }}</p>
-                                <h5>Ksh {{ $item->price }}</h5>
-                            </div>
+        <section id="product1" class="section-p1">
+            <h2>Searched Products</h2>
+            <div class="pro-container">
+                @foreach ($items as $item)          
+                    <div class="pro">  
+                        <a href="details/{{$item['id']}}">  
+                        <img src="image/{{ $item->gallery }}" alt="Photo of the product" class="">                           
+                            
+                            <div class="des">
+                                <h5>{{ $item->name }}</h5>
+                                <span>{{ $item->description }}</span>
+                                <h4> Ksh {{ $item->price }}</h4>            
+                            </div>         
                         </a>
                     </div>  
-                    
                 @endforeach
             </div>
-    </div>   
+
+        </section>   
 
         
     

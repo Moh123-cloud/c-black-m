@@ -17,7 +17,7 @@ class homeController extends Controller
     {
         if (Auth::id()) {
             if (Auth::user()->usertype == '0') {
-                $product = Product::inRandomOrder()->limit(36)->get();
+                $product = Product::inRandomOrder()->limit(8)->get();
 
                 $phone = Product::where('category', 'Phone & Accessories')
                     ->get();

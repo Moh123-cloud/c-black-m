@@ -122,8 +122,12 @@
         </section>
         
         <section id="product1" class="section-p1">
-            <h2>Phones</h2>
-            <p><a href="{{ route('phone') }}">See All</a></p>
+              @if (count($phone) > 0)
+                <a href="{{ route('phone') }}">
+                    <h2>Phones & Accessories</h2>
+                        <p><a href="{{ route('phone') }}">See All</a></p>
+                </a>
+            @endif
             <div class="pro-container">
                  @foreach ($phone as $item)          
                     <div class="pro">  
@@ -143,8 +147,12 @@
         </section>
 
         <section id="product1" class="section-p1">
-            <h2>Electronnics</h2>
-            <p><a href="{{ route('electronic') }}">See All</a></p>
+              @if (count($electronic) > 0)
+                <a href="{{ route('electronic') }}">
+                    <h2>Electronics</h2>
+                        <p><a href="{{ route('electronic') }}">See All</a></p>
+                </a>
+            @endif
             <div class="pro-container">
                  @foreach ($electronic as $item)          
                     <div class="pro">  
@@ -163,8 +171,12 @@
 
         </section>
         <section id="product1" class="section-p1">
-            <h2>Home</h2>
-            <p><a href="{{ route('home1') }}">See All</a></p>
+              @if (count($home1) > 0)
+                <a href="{{ route('home1') }}">
+                    <h2>Home and Office</h2>
+                        <p><a href="{{ route('home1') }}">See All</a></p>
+                </a>
+            @endif
             <div class="pro-container">
                  @foreach ($home1 as $item)          
                     <div class="pro">  
@@ -181,16 +193,16 @@
                 @endforeach
             </div>
             
-            <section id="banner" class="section-m1">
-                <h4>Repair Services</h4>
-                <h2>Up to <span>70% off</span>-  All T-shirts and Accessories</h2>
-                <button class="normal">Explore More</button>
-            </section>
+          
 
         </section>
         <section id="product1" class="section-p1">
-            <h2>Furniture</h2>
-            <p><a href="{{ route('furniture') }}">See All</a></p>
+              @if (count($furniture) > 0)
+                <a href="{{ route('furniture') }}">
+                    <h2>Furnitures</h2>
+                        <p><a href="{{ route('furniture') }}">See All</a></p>
+                </a>
+            @endif
             <div class="pro-container">
                  @foreach ($furniture as $item)          
                     <div class="pro">  
@@ -209,8 +221,13 @@
 
         </section>
         <section id="product1" class="section-p1">
-            <h2>Computer</h2>
-            <p><a href="{{ route('computer') }}">See All</a></p>
+             @if (count($computer) > 0)
+                <a href="{{ route('computer') }}">
+                    <h2>Computer Accessories</h2>
+                        <p><a href="{{ route('computer') }}">See All</a></p>
+                </a>
+            @endif
+            
             <div class="pro-container">
                  @foreach ($computer as $item)          
                     <div class="pro">  
@@ -229,8 +246,12 @@
 
         </section>
         <section id="product1" class="section-p1">
-            <h2>Fashion</h2>
-            <p><a href="{{ route('fashion') }}">See All</a></p>
+              @if (count($fashion) > 0)
+                <a href="{{ route('fashion') }}">
+                    <h2>Fashion</h2>
+                        <p><a href="{{ route('fashion') }}">See All</a></p>
+                </a>
+            @endif
             <div class="pro-container">
                  @foreach ($fashion as $item)          
                     <div class="pro">  
@@ -249,8 +270,12 @@
 
         </section>
         <section id="product1" class="section-p1">
-            <h2>Sports</h2>
-            <p><a href="{{ route('sport') }}">See All</a></p>
+              @if (count($sport) > 0)
+                <a href="{{ route('sport') }}">
+                    <h2>Sports</h2>
+                        <p><a href="{{ route('sport') }}">See All</a></p>
+                </a>
+            @endif
             <div class="pro-container">
                  @foreach ($sport as $item)          
                     <div class="pro">  
@@ -268,6 +293,12 @@
             </div>
 
         </section>
+
+          <section id="banner" class="section-m1">
+                <h4>Repair Services</h4>
+                <h2>Up to <span>70% off</span>-  All T-shirts and Accessories</h2>
+                <button class="normal">Explore More</button>
+            </section>
  
 
 
@@ -306,11 +337,7 @@
             </div>
         </div> --}}
 
-        <section id="banner" class="section-m1">
-            <h4>Repair Services</h4>
-            <h2>Up to <span>70% off</span>-  All T-shirts and Accessories</h2>
-            <button class="normal">Explore More</button>
-        </section>
+        
 
        
 
@@ -411,20 +438,6 @@
             </div>
         </div> --}}
 
-        <section id="sm-banner" class="section-p1">
-            <div class="banner-box">
-                <h4>crazy deals</h4>
-                <h2>Buy 1 get 1 Free</h2>
-                <span>The best classic dress is on sale</span>
-                <button class="white">Learn more</button>
-            </div>
-            <div class="banner-box banner-box2">
-                <h4>Spring/summer</h4>
-                <h2>Buy 1 get 1 Free</h2>
-                <span>The best classic dress is on sale</span>
-                <button class="white">Collection</button>
-            </div>
-        </section>
 
         {{-- Furniture Display --}}
         {{-- <div class="trending-wrapper">
@@ -621,7 +634,7 @@
                 @endforeach
 
             </div>
-        </div> --}}
+        </div> 
     </div>
 
 {{-- </div> --}}

@@ -72,9 +72,7 @@
             <p>Save more with coupons & up to 70% off</p>
             <button>Shop Now</button>
         </section>
-
-
-    
+        
         <section id="product1" class="section-p1">
             <h2>Phones & Accessories</h2>
 

@@ -62,7 +62,7 @@
                 <img class="logo" src="img/black.png" alt="">
                 <h4>Contact</h4>
                 <p><strong>Addresses:</strong> 00232 Chuka, Tharaka Nthi</p>
-                <p><strong>Phone: </strong> +254718277801</p>
+                <p><strong>Phone: </strong> </p>
                 <p><strong>Hours: </strong> Available 24/7</p>
                 <div class="follow">
                     <h4>follow us</h4>
@@ -86,7 +86,12 @@
 
             <div class="col">
                 <h4>My Account</h4>
-                <a href="{{ route('logout') }}">Sign out</a>
+                <a href="{{ route('logout') }}">
+                        <form action="{{ route('logout') }}" method="POST" >
+                            @csrf
+                            <button type="submit"  style="background:transparent; border:none;">Sign Out</button>
+                        </form>
+                </a>
                 <a href="{{ route('/') }}">Shop with us</a>
                 <a href="{{ route('sell') }}">Sell on blackM</a>
                 <a href="{{ url('item') }}">My Products</a>

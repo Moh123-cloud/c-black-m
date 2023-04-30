@@ -45,7 +45,7 @@
     </div> --}}
 
         
-         <section id="hero">
+        <section id="hero">
             <h4>For comrades by comrades</h4>
             <h2 class="hero-h2">Super value deals</h2>
             <h1>on all products</h1>

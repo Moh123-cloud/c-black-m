@@ -60,6 +60,13 @@
     </div><br><br>
     <br><br> --}}
 
+        <section id="hero">
+            <h4>For comrades by comrades</h4>
+            <h2 class="hero-h2">Super value deals</h2>
+            <h1>on all products</h1>
+            <p>Save more with coupons & up to 70% off</p>
+            <button>Shop Now</button>
+        </section>
     
         <section id="product1" class="section-p1">
             <h2>Others</h2>

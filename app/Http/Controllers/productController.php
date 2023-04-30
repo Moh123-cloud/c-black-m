@@ -106,6 +106,6 @@ class productController extends Controller
         ->orWhere('category', 'like','%' . $req->input('search'). '%')
         ->orWhere('description', 'like','%' . $req->input('search'). '%')
         ->get();
-        return view('search', ['products'=>$data]);
+        return view('search', ['items'=>$data]);
     }
 }                                                                                                                                                                                            
